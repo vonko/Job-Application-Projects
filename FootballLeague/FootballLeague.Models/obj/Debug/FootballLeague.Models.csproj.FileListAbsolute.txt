@@ -1,0 +1,11 @@
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Models\bin\Debug\LiveResults.Models.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Models\bin\Debug\LiveResults.Models.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Models\obj\Debug\FootballLeague.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Models\obj\Debug\LiveResults.Models.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Models\obj\Debug\LiveResults.Models.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\bin\Debug\FootballLeague.Models.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\bin\Debug\FootballLeague.Models.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\obj\Debug\FootballLeague.Models.csprojAssemblyReference.cache
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\obj\Debug\FootballLeague.Models.csproj.CoreCompileInputs.cache
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\obj\Debug\FootballLeague.Models.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Models\obj\Debug\FootballLeague.Models.pdb

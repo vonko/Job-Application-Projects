@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SlotMachine.IoCContainer.Autofac\SlotMachine.IoCContainer.Autofac.csproj" />
+    <ProjectReference Include="..\SlotMachine.Models\SlotMachine.Models.csproj" />
+    <ProjectReference Include="..\SlotMachine.Services\SlotMachine.Services.csproj" />
+  </ItemGroup>
+
+</Project>

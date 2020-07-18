@@ -1,0 +1,49 @@
+﻿@model FootballLeague.Web.Models.PlayedGamesDataContextViewModel
+
+<h1>Played Games</h1>
+@Html.ValidationSummary()
+
+<div class="row">
+    <div class="col-sm">
+        @Html.ActionLink("Add Played Game", "AddPlayedGame", "PlayedGame")
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        NAME
+    </div>
+    <div class="col-md-3">
+        STADIUM
+    </div>
+    <div class="col-md-3">
+        YEAR FOUND
+    </div>
+    <div class="col-md-3">
+        POINTS
+    </div>
+</div>
+
+@foreach (var team in Model.PlayedGames)
+{
+    <div class="row">
+        <div class="col-md-3">
+            @Html.LabelFor(m => team.Name, new { @class = "col-md-2 control-label" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => team.Stadium, new { @class = "col-md-2 control-label" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => team.YearFound, new { @class = "col-md-2 control-label" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => team.Points, new { @class = "col-md-2 control-label" })
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+
+    </script>
+}

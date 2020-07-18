@@ -1,0 +1,5 @@
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Models\bin\Debug\NewsPortal.Models.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Models\bin\Debug\NewsPortal.Models.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Models\obj\Debug\NewsPortal.Models.csproj.CoreCompileInputs.cache
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Models\obj\Debug\NewsPortal.Models.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Models\obj\Debug\NewsPortal.Models.pdb
