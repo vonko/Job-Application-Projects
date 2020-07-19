@@ -1,9 +1,0 @@
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\obj\Debug\FootballLeague.DataAccess.DbModels.csprojAssemblyReference.cache
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\obj\Debug\FootballLeague.DataAccess.DbModels.csproj.CoreCompileInputs.cache
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\bin\Debug\FootballLeague.DataAccess.DbModels.dll
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\obj\Debug\FootballLeague.DataAccess.DbModels.dll
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\obj\Debug\FootballLeague.DataAccess.DbModels.pdb
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\bin\Debug\FootballLeague.Models.dll
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\bin\Debug\FootballLeague.Models.pdb
-D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess.DbModels\obj\Debug\FootballLeague.DataAccess.DbModels.csproj.CopyComplete
