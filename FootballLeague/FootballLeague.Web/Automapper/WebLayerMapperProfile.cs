@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
-using FootballLeague.Models;
-using FootballLeague.Web.Models;
+using FootballLeague.Models.FootballTeam;
+using FootballLeague.Models.PlayedGame;
+using FootballLeague.Models.Rankings;
+using FootballLeague.Web.Models.FootballTeams;
+using FootballLeague.Web.Models.PlayedGames;
+using FootballLeague.Web.Models.Rankings;
 using System.Collections.Generic;
 
 namespace FootballLeague.Web.Automapper
@@ -22,6 +26,8 @@ namespace FootballLeague.Web.Automapper
             CreateMap<PlayedGameDto, PlayedGameViewModel>();
 
             CreateMap<IList<PlayedGameDto>, IList<PlayedGameViewModel>>();
+
+            CreateMap<RankingDto, RankingViewModel>();
         }
     }
 }

@@ -1,10 +1,7 @@
 ﻿using AutoMapper;
 using FootballLeague.DataAccess.DbModels;
-using FootballLeague.Models;
-using LiveResults.DataAccess;
+using FootballLeague.Models.FootballTeam;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 
 namespace FootballLeague.DataAccess.Implementation
@@ -28,11 +25,6 @@ namespace FootballLeague.DataAccess.Implementation
             return addedTeam;
         }
 
-        public virtual IQueryable<FootballTeam> All()
-        {
-            return this.DbSet.AsQueryable();
-        }
-
         public virtual IList<FootballTeamDto> AllMaterialed()
         {
             var teams = this.DbSet.AsQueryable();
@@ -47,20 +39,6 @@ namespace FootballLeague.DataAccess.Implementation
             FootballTeamDto foundTeamDto = Mapper.Map<FootballTeam, FootballTeamDto>(team);
 
             return foundTeamDto;
-        }
-
-        public virtual int Update(FootballTeam TObject)
-        {
-            DbEntityEntry<FootballTeam> entry = this.context.Entry(TObject);
-            this.DbSet.Attach(TObject);
-            entry.State = EntityState.Modified;
-
-            if (!this.shareContext)
-            {
-                return this.context.SaveChanges();
-            }
-
-            return 0;
         }
     }
 }

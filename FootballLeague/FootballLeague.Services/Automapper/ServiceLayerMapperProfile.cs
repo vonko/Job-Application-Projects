@@ -1,6 +1,9 @@
 ﻿using AutoMapper;
 using FootballLeague.DataAccess.DbModels;
 using FootballLeague.Models;
+using FootballLeague.Models.FootballTeam;
+using FootballLeague.Models.PlayedGame;
+using FootballLeague.Models.Rankings;
 
 namespace FootballLeague.Services.Automapper
 {
@@ -13,6 +16,8 @@ namespace FootballLeague.Services.Automapper
             CreateMap<FootballTeamDto, FootballTeam>();
 
             CreateMap<UpdateFootballTeamDto, FootballTeam>();
+
+            CreateMap<RankingDto, FootballTeam>();
 
             CreateMap<AddPlayedGameDto, PlayedGame>();
 

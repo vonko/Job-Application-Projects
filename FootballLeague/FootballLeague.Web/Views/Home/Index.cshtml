@@ -1,7 +1,12 @@
 ﻿<h1>Football League</h1>
 
-<div class="row">
-    @Html.ActionLink("Football Teams", "FootballTeams", "FootballTeam")
+<div class="row pl-25">
+    <div class="col-md-4">
+        @Html.ActionLink("Football Teams", "FootballTeams", "FootballTeam")
+    </div>
+    <div class="col-md-4">
+        @Html.ActionLink("Rankings", "Rankings", "Ranking")
+    </div>
 </div>
 
 @section scripts {

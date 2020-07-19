@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using FootballLeague.Models;
+﻿using FootballLeague.Models;
+using FootballLeague.Models.FootballTeam;
+using System.Collections.Generic;
 
 namespace FootballLeague.Services
 {

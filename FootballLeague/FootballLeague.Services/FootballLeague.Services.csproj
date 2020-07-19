@@ -50,6 +50,7 @@
     <Compile Include="ICacheProviderService.cs" />
     <Compile Include="IFootballTeamsService.cs" />
     <Compile Include="IPlayedGamesService.cs" />
+    <Compile Include="IRankingsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

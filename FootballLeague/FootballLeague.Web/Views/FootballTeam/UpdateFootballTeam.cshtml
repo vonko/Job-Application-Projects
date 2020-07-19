@@ -1,4 +1,4 @@
-﻿@model FootballLeague.Web.Models.UpdateFootballTeamViewModel
+﻿@model FootballLeague.Web.Models.FootballTeams.UpdateFootballTeamViewModel
 @{
     ViewBag.Title = "Football Team";
 }
@@ -8,11 +8,12 @@
 
 @if (Model != null)
 {
-    using (Html.BeginForm("AddFootballTeam", "FootballTeam", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    using (Html.BeginForm("UpdateFootballTeam", "FootballTeam", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
-        <h4>Add a Football Team</h4>
+        <h4>Update Team Data</h4>
         <hr />
+        @Html.HiddenFor(m => m.ID)
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })

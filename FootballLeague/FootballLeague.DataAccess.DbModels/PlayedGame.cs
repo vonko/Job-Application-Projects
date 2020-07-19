@@ -1,4 +1,4 @@
-﻿using FootballLeague.Models;
+﻿using FootballLeague.Models.PlayedGame;
 using System;
 
 namespace FootballLeague.DataAccess.DbModels

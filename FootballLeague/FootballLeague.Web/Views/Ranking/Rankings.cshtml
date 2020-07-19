@@ -1,0 +1,38 @@
+﻿@model FootballLeague.Web.Models.Rankings.RankingsDataContextViewModel
+
+<h1>Football Teams</h1>
+@Html.ValidationSummary()
+
+<div class="row">
+    <div class="col-md-3">
+        RANKING
+    </div>
+    <div class="col-md-3">
+        TEAM NAME
+    </div>
+    <div class="col-md-3">
+        POINTS
+    </div>
+</div>
+
+@foreach (var ranking in Model.Rankings)
+{
+    <div class="row">
+        <div class="col-md-3">
+            @ranking.Ranking
+        </div>
+        <div class="col-md-3">
+            @ranking.Name
+        </div>
+        <div class="col-md-3">
+            @ranking.Points
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+
+    </script>
+}
+

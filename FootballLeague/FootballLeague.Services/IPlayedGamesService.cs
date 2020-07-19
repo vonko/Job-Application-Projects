@@ -1,4 +1,5 @@
 ﻿using FootballLeague.Models;
+using FootballLeague.Models.PlayedGame;
 using System.Collections.Generic;
 
 namespace FootballLeague.Services
@@ -9,7 +10,7 @@ namespace FootballLeague.Services
 
         Result<IList<PlayedGameDto>> GetAllGames();
 
-        Result<PlayedGameDto> PlayGame(AddPlayedGameDto teamDto);
+        Result<PlayedGameDto> AddPlayedGame(AddPlayedGameDto teamDto);
 
         Result UpdateGame(PlayedGameDto teamDto);
 

@@ -190,16 +190,19 @@
     <Compile Include="Controllers\FootballTeamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayedGameController.cs" />
+    <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AddFootballTeamViewModel.cs" />
-    <Compile Include="Models\AddPlayedGameViewModel.cs" />
-    <Compile Include="Models\FootballTeamsDataContextViewModel.cs" />
-    <Compile Include="Models\FootballTeamViewModel.cs" />
-    <Compile Include="Models\PlayedGamesDataContextViewModel.cs" />
-    <Compile Include="Models\PlayedGameViewModel.cs" />
-    <Compile Include="Models\UpdateFootballTeamViewModel.cs" />
+    <Compile Include="Models\FootballTeams\AddFootballTeamViewModel.cs" />
+    <Compile Include="Models\PlayedGames\AddPlayedGameViewModel.cs" />
+    <Compile Include="Models\FootballTeams\FootballTeamsDataContextViewModel.cs" />
+    <Compile Include="Models\FootballTeams\FootballTeamViewModel.cs" />
+    <Compile Include="Models\PlayedGames\PlayedGamesDataContextViewModel.cs" />
+    <Compile Include="Models\PlayedGames\PlayedGameViewModel.cs" />
+    <Compile Include="Models\Rankings\RankingViewModel.cs" />
+    <Compile Include="Models\Rankings\RankingsDataContextViewModel.cs" />
+    <Compile Include="Models\FootballTeams\UpdateFootballTeamViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +254,7 @@
     <Content Include="Views\PlayedGame\PlayedGames.cshtml" />
     <Content Include="Views\PlayedGame\AddPlayedGame.cshtml" />
     <Content Include="Views\PlayedGame\UpdatePlayedGame.cshtml" />
+    <Content Include="Views\Ranking\Rankings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

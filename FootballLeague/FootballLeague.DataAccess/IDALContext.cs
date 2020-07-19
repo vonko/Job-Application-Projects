@@ -1,6 +1,4 @@
-﻿using FootballLeague.DataAccess.DbModels;
-using LiveResults.DataAccess;
-using System;
+﻿using System;
 
 namespace FootballLeague.DataAccess
 {
@@ -8,7 +6,7 @@ namespace FootballLeague.DataAccess
     {
         IFootballTeamsRepository FootballTeamsRepository { get; }
 
-        IRepository<PlayedGame> PlayedGamesRepository { get; }
+        IPlayedGamesRepository PlayedGamesRepository { get; }
 
         int SaveChanges();
     }

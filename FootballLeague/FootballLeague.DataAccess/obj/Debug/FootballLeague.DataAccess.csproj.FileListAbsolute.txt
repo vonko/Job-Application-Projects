@@ -20,8 +20,6 @@ D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\F
 D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.Models.dll
 D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
 D:\Job Application Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.Models.pdb
-D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\LiveResults.DataAccess.dll
-D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\LiveResults.DataAccess.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.DbModels.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.Models.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
@@ -29,5 +27,7 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\F
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.csprojAssemblyReference.cache
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.csproj.CoreCompileInputs.cache
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.csproj.CopyComplete
-D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\LiveResults.DataAccess.dll
-D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\LiveResults.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.pdb

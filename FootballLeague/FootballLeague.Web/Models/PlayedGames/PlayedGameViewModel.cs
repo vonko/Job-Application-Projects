@@ -1,4 +1,6 @@
-﻿namespace FootballLeague.Web.Models
+﻿using FootballLeague.Web.Models.FootballTeams;
+
+namespace FootballLeague.Web.Models.PlayedGames
 {
     public class PlayedGameViewModel : AddPlayedGameViewModel
     {

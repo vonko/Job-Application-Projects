@@ -7,8 +7,8 @@
     <ProjectGuid>{DED6DDCD-FC8E-446B-9DF5-D09E6314BB2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LiveResults.DataAccess</RootNamespace>
-    <AssemblyName>LiveResults.DataAccess</AssemblyName>
+    <RootNamespace>FootballLeague.DataAccess</RootNamespace>
+    <AssemblyName>FootballLeague.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDALContext.cs" />
+    <Compile Include="IPlayedGamesRepository.cs" />
     <Compile Include="IFootballTeamsRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryBase.cs" />

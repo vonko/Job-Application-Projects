@@ -1,7 +1,7 @@
 ﻿using FootballLeague.DataAccess.DbModels;
-using LiveResults.DataAccess;
 using System;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -27,6 +27,11 @@ namespace FootballLeague.DataAccess.Implementation
             this.shareContext = true;
         }
 
+        public virtual IQueryable<TObject> All()
+        {
+            return this.DbSet.AsQueryable();
+        }
+
         public TObject FindRough(params object[] keys)
         {
             return this.DbSet.Find(keys);
@@ -47,20 +52,25 @@ namespace FootballLeague.DataAccess.Implementation
             return this.DbSet.Where(predicate).AsQueryable<TObject>();
         }
 
-        public virtual int Delete(Expression<Func<TObject, bool>> predicate)
+        public virtual int Update(TObject obj)
         {
-            IQueryable<TObject> objects = this.Filter(predicate);
-            foreach (TObject obj in objects)
+            DbEntityEntry<TObject> entry = this.context.Entry(obj);
+            this.DbSet.Attach(obj);
+            entry.State = EntityState.Modified;
+
+            return this.context.SaveChanges();
+        }
+
+        public virtual int Delete(int id)
+        {
+            TObject obj = this.DbSet.Find(id);
+
+            if (obj != null)
             {
                 this.DbSet.Remove(obj);
             }
 
-            if (!this.shareContext)
-            {
-                return this.context.SaveChanges();
-            }
-
-            return 0;
+            return this.context.SaveChanges();
         }
 
         public void Dispose()

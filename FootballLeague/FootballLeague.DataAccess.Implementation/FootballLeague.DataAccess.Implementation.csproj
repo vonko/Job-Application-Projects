@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="DALContext.cs" />
     <Compile Include="FootballLeagueDbContext.cs" />
+    <Compile Include="PlayedGamesRepository.cs" />
     <Compile Include="FootballTeamsRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository.cs" />

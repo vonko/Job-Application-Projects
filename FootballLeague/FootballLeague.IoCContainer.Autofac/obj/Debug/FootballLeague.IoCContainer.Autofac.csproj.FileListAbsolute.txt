@@ -107,7 +107,6 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\b
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.Implementation.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.Services.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.Services.Implementation.dll
-D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\LiveResults.DataAccess.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\Newtonsoft.Json.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\System.Net.Http.Formatting.dll
@@ -124,7 +123,6 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\b
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\AutoMapper.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.Implementation.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.Implementation.dll.config
-D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\LiveResults.DataAccess.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.Services.Implementation.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.Services.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\Autofac.xml
@@ -148,3 +146,5 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\o
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\obj\Debug\FootballLeague.IoCContainer.Autofac.csproj.CopyComplete
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\obj\Debug\FootballLeague.IoCContainer.Autofac.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\obj\Debug\FootballLeague.IoCContainer.Autofac.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.pdb

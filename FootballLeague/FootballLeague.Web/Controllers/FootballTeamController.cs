@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using FootballLeague.Models;
+using FootballLeague.Models.FootballTeam;
 using FootballLeague.Services;
-using FootballLeague.Web.Models;
+using FootballLeague.Web.Models.FootballTeams;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -56,7 +57,7 @@ namespace FootballLeague.Web.Controllers
                 ModelState.AddModelError("", $"Error: { result.Message }");
             }
 
-            return View();
+            return RedirectToAction("FootballTeams", "FootballTeam");
         }
 
         [HttpGet]
@@ -91,7 +92,19 @@ namespace FootballLeague.Web.Controllers
                 ModelState.AddModelError("", $"Error: { result.Message }");
             }
 
-            return View();
+            return RedirectToAction("FootballTeams", "FootballTeam");
+        }
+
+        [HttpGet]
+        public ActionResult DeleteFootballTeam(int teamId)
+        {
+            Result result = this.service.DeleteTeam(teamId);
+            if (result.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { result.Message }");
+            }
+
+            return RedirectToAction("FootballTeams", "FootballTeam");
         }
     }
 }

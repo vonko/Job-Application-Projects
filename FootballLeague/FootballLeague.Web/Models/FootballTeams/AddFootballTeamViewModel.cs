@@ -1,4 +1,4 @@
-﻿namespace FootballLeague.Web.Models
+﻿namespace FootballLeague.Web.Models.FootballTeams
 {
     public class AddFootballTeamViewModel
     {

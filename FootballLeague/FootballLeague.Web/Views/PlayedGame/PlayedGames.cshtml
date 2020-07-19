@@ -1,4 +1,4 @@
-﻿@model FootballLeague.Web.Models.PlayedGamesDataContextViewModel
+﻿@model FootballLeague.Web.Models.PlayedGames.PlayedGamesDataContextViewModel
 
 <h1>Played Games</h1>
 @Html.ValidationSummary()
@@ -11,33 +11,27 @@
 
 <div class="row">
     <div class="col-md-3">
-        NAME
+        HOME TEAM
     </div>
     <div class="col-md-3">
-        STADIUM
+        AWAY TEAM
     </div>
     <div class="col-md-3">
-        YEAR FOUND
-    </div>
-    <div class="col-md-3">
-        POINTS
+        RESULT
     </div>
 </div>
 
-@foreach (var team in Model.PlayedGames)
+@foreach (var game in Model.PlayedGames)
 {
     <div class="row">
         <div class="col-md-3">
-            @Html.LabelFor(m => team.Name, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(m => game.HomeTeam.Name)
         </div>
         <div class="col-md-3">
-            @Html.LabelFor(m => team.Stadium, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(m => game.AwayTeam.Name)
         </div>
         <div class="col-md-3">
-            @Html.LabelFor(m => team.YearFound, new { @class = "col-md-2 control-label" })
-        </div>
-        <div class="col-md-3">
-            @Html.LabelFor(m => team.Points, new { @class = "col-md-2 control-label" })
+            @Html.LabelFor(m => game.Result)
         </div>
     </div>
 }

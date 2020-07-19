@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AutoMapper;
-using FootballLeague.DataAccess.DbModels;
+﻿using FootballLeague.DataAccess.DbModels;
 using FootballLeague.Models;
+using FootballLeague.Models.FootballTeam;
 using FootballLeague.Services;
+using System;
+using System.Collections.Generic;
 
 namespace FootballLeague.DataAccess.Implementation
 {
@@ -119,7 +118,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                this.dalCotext.FootballTeamsRepository.Delete(t => t.ID == teamId);
+                this.dalCotext.FootballTeamsRepository.Delete(teamId);
             }
             catch (Exception ex)
             {
@@ -127,28 +126,6 @@ namespace FootballLeague.DataAccess.Implementation
             }
 
             return result.SetSuccess($"Team with #{ teamId } deleted successfully.");
-        }
-
-        public Result<IList<FootballTeamDto>> GetTeamRanikings()
-        {
-            Result<IList<FootballTeamDto>> result = new Result<IList<FootballTeamDto>>();
-
-            try
-            {
-                List<FootballTeam> teams = this.dalCotext.FootballTeamsRepository
-                                           .All()
-                                           .OrderByDescending(t => t.Points)
-                                           .ToList();
-                IList<FootballTeamDto> teamDtos = Mapper.Map<List<FootballTeam>, List<FootballTeamDto>>(teams);
-
-                return result.SetData(teamDtos);
-            }
-            catch (Exception ex)
-            {
-                result.SetError(ex.Message);
-
-                return result;
-            }
         }
     }
 }

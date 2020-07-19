@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FootballTeam\AddFootballTeamDto.cs" />
+    <Compile Include="Rankings\RankingDto.cs" />
     <Compile Include="PlayedGame\AddPlayedGameDto.cs" />
     <Compile Include="DisplayStatus.cs" />
     <Compile Include="FootballTeam\FootballTeamDto.cs" />
