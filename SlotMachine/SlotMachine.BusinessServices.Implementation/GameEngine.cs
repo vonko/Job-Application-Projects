@@ -1,4 +1,5 @@
 ﻿using SlotMachine.Models;
+using System.Collections.Generic;
 
 namespace SlotMachine.BusinessServices.Implementation
 {
@@ -7,15 +8,15 @@ namespace SlotMachine.BusinessServices.Implementation
         private decimal currentBalance;
         private readonly ISymbolsRollGenerator symbolsGenerator;
         private readonly INumberRowsAndColumnsProvider rowsAndColumnsProvider;
-        private readonly ISymbolsCoefficentsCalculator symbolsCoefficentsCalculator;
+        private readonly ISymbolsCoefficientsCalculator symbolsCoefficientsCalculator;
 
         public GameEngine(ISymbolsRollGenerator symbolsGenerator,
                           INumberRowsAndColumnsProvider rowsAndColumnsProvider,
-                          ISymbolsCoefficentsCalculator symbolsCoefficentsCalculator)
+                          ISymbolsCoefficientsCalculator symbolsCoefficientsCalculator)
         {
             this.symbolsGenerator = symbolsGenerator;
             this.rowsAndColumnsProvider = rowsAndColumnsProvider;
-            this.symbolsCoefficentsCalculator = symbolsCoefficentsCalculator;
+            this.symbolsCoefficientsCalculator = symbolsCoefficientsCalculator;
         }
 
         public Result SetDepositAmount(decimal depositAmount)
@@ -34,6 +35,13 @@ namespace SlotMachine.BusinessServices.Implementation
         public Result<GameTurnResult> ExecuteGameTurn(decimal stakeAmount)
         {
             Result<GameTurnResult> result = new Result<GameTurnResult>();
+            if (this.currentBalance <= 0)
+            {
+                result.SetError("You do not have balance to continue playing!");
+
+                return result;
+            }
+
             if (stakeAmount <= 0)
             {
                 result.SetError($"Please enter a valid stake amount!");
@@ -48,7 +56,7 @@ namespace SlotMachine.BusinessServices.Implementation
                 return result;
             }
 
-            Result<SymbolsSet> generateSymbolsResult = this.symbolsGenerator.GenerateSymbols(this.rowsAndColumnsProvider.NumberRows, 
+            Result<SymbolsSet> generateSymbolsResult = this.symbolsGenerator.GenerateSymbols(this.rowsAndColumnsProvider.NumberRowsPerTurn,
                                                                                              this.rowsAndColumnsProvider.NumberColumns);
             if (generateSymbolsResult.IsError)
             {
@@ -58,9 +66,50 @@ namespace SlotMachine.BusinessServices.Implementation
             }
 
             SymbolsSet generatedSymbols = generateSymbolsResult.Data;
+            //test
+            //SymbolsSet generatedSymbols = new SymbolsSet();
+            //generatedSymbols.Rows.Add(new SymbolsRow()
+            //{
+            //    Symbols = new List<Symbol>() { Symbol.B, Symbol.A, Symbol.A }
+            //});
+            //generatedSymbols.Rows.Add(new SymbolsRow()
+            //{
+            //    Symbols = new List<Symbol>() { Symbol.A, Symbol.A, Symbol.A }
+            //});
+            //generatedSymbols.Rows.Add(new SymbolsRow()
+            //{
+            //    Symbols = new List<Symbol>() { Symbol.W, Symbol.W, Symbol.W }
+            //});
+            //generatedSymbols.Rows.Add(new SymbolsRow()
+            //{
+            //    Symbols = new List<Symbol>() { Symbol.W, Symbol.A , Symbol.A }
+            //});
+            //test
 
-            decimal coefficent = this.symbolsCoefficentsCalculator.CalculateCoefficent(generatedSymbols);
+            Result<decimal> coefficientsResult = this.symbolsCoefficientsCalculator.CalculateTotalCoefficient(generatedSymbols);
+            if (coefficientsResult.IsError)
+            {
+                result.SetError(coefficientsResult.Message);
+
+                return result;
+            }
+
+            decimal coefficent = coefficientsResult.Data;
             decimal amountWon = stakeAmount * coefficent;
+            this.UpdateCurrentBalance(stakeAmount, amountWon, coefficent);
+
+            GameTurnResult gameTurnResult = new GameTurnResult()
+            {
+                Symbols = generatedSymbols,
+                AmountWon = amountWon,
+                CurrentBalance = this.currentBalance
+            };
+
+            return result.SetData(gameTurnResult);
+        }
+
+        private decimal UpdateCurrentBalance(decimal stakeAmount, decimal amountWon, decimal coefficent)
+        {
             if (coefficent == 0)
             {
                 this.currentBalance -= stakeAmount;
@@ -71,14 +120,7 @@ namespace SlotMachine.BusinessServices.Implementation
                 this.currentBalance += amountWon;
             }
 
-            GameTurnResult gameTurnResult = new GameTurnResult()
-            {
-                Symbols = generatedSymbols,
-                AmountWon = amountWon,
-                CurrentBalance = this.currentBalance
-            };
-
-            return result.SetData(gameTurnResult);
+            return amountWon;
         }
     }
 }

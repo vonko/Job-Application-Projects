@@ -35,6 +35,14 @@ namespace SlotMachine.ConsoleServices.Implementation
 
                 Console.WriteLine();
             }
+            Console.WriteLine();
+        }
+
+        public void PrintBalance(decimal amountWon, decimal currentBalance)
+        {
+            Console.WriteLine($"You have won: { amountWon }");
+            Console.Write($"Current balance is: { currentBalance }");
+            Console.WriteLine();
         }
 
         private decimal GetAmount(string statementMessage, string errorMessage, decimal maxPossibleAmount = int.MaxValue)

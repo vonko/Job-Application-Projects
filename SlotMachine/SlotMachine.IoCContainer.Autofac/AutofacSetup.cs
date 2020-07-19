@@ -16,7 +16,9 @@ namespace SlotMachine.IoCContainer.Autofac
             builder.RegisterType<GameEnvironment>().As<IGameEnvironment>().InstancePerLifetimeScope();
             builder.RegisterType<SymbolsRollGenerator>().As<ISymbolsRollGenerator>().InstancePerLifetimeScope();
             builder.RegisterType<NumberRowsAndColumnsProvider>().As<INumberRowsAndColumnsProvider>().InstancePerLifetimeScope();
-            builder.RegisterType<SymbolsCoefficentsCalculator>().As<ISymbolsCoefficentsCalculator>().InstancePerLifetimeScope();
+            builder.RegisterType<SymbolsCoefficientsProvider>().As<ISymbolsCoefficientsProvider>().InstancePerLifetimeScope();
+            builder.RegisterType<SymbolsCoefficientsCalculator>().As<ISymbolsCoefficientsCalculator>().InstancePerLifetimeScope();
+            builder.RegisterType<SymbolsChanceProvider>().As<ISymbolsChanceProvider>().InstancePerLifetimeScope();
             builder.RegisterType<GameEngine>().As<IGameEngine>().InstancePerLifetimeScope();
 
             // Set the dependency resolver to be Autofac.

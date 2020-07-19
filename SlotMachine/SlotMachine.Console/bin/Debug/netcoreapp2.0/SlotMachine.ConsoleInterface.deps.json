@@ -8,9 +8,7 @@
     ".NETCoreApp,Version=v2.0": {
       "SlotMachine.ConsoleInterface/1.0.0": {
         "dependencies": {
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.IoCContainer.Autofac": "1.0.0",
-          "SlotMachine.Models": "1.0.0"
+          "SlotMachine.IoCContainer.Autofac": "1.0.0"
         },
         "runtime": {
           "SlotMachine.ConsoleInterface.dll": {}
@@ -56,6 +54,7 @@
       "SlotMachine.BusinessServices.Implementation/1.0.0": {
         "dependencies": {
           "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.ConsoleServices": "1.0.0",
           "SlotMachine.Models": "1.0.0"
         },
         "runtime": {

@@ -5,10 +5,12 @@ namespace SlotMachine.BusinessServices.Implementation
 {
     public class SymbolsRollGenerator : ISymbolsRollGenerator
     {
-        private const int APPLE_CHANCE = 45;
-        private const int BANANA_CHANCE = 35;
-        private const int PINEAPLE_CHANCE = 15;
-        private const int WILDCARD_CHANCE = 5;
+        private readonly ISymbolsChanceProvider symbolsChanceProvider;
+
+        public SymbolsRollGenerator(ISymbolsChanceProvider symbolsChanceProvider)
+        {
+            this.symbolsChanceProvider = symbolsChanceProvider;
+        }
 
         public Result<SymbolsSet> GenerateSymbols(int rowsNumber, int columnsNumber)
         {
@@ -46,24 +48,30 @@ namespace SlotMachine.BusinessServices.Implementation
            //generate an number with min 0, max 99
             int percent = randomGenerator.Next(0, 100);
 
+            var symbolsChances = this.symbolsChanceProvider.GetSymbolsChancesToRoll();
+            int wildCardChance = symbolsChances[Symbol.W];
+            int pineapleChance = symbolsChances[Symbol.P];
+            int bananaChance = symbolsChances[Symbol.B];
+            int appleChance = symbolsChances[Symbol.A];
+
             Symbol symbolRolled;
             //5 % Chance, 0 to 4
-            if (percent < WILDCARD_CHANCE)
+            if (percent < wildCardChance)
             {
                 symbolRolled = Symbol.W;
             }
             //15 % Chance, 5 to 19
-            else if (percent < WILDCARD_CHANCE + PINEAPLE_CHANCE)
+            else if (percent < wildCardChance + pineapleChance)
             {
                 symbolRolled = Symbol.P;
             }
             //35 % Chance, 20 to 55
-            else if (percent < WILDCARD_CHANCE + PINEAPLE_CHANCE + BANANA_CHANCE)
+            else if (percent < wildCardChance + pineapleChance + bananaChance)
             {
                 symbolRolled = Symbol.B;
             }
             //15 % Chance, 30 to 44
-            else if (percent < WILDCARD_CHANCE + PINEAPLE_CHANCE + BANANA_CHANCE + APPLE_CHANCE)
+            else if (percent < wildCardChance + pineapleChance + bananaChance + appleChance)
             {
                 symbolRolled = Symbol.A;
             }

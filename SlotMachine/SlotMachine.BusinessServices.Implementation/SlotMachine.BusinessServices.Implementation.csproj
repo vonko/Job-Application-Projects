@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SlotMachine.BusinessServices\SlotMachine.BusinessServices.csproj" />
+    <ProjectReference Include="..\SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj" />
     <ProjectReference Include="..\SlotMachine.Models\SlotMachine.Models.csproj" />
   </ItemGroup>
 

@@ -11,6 +11,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.1",
           "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.ConsoleServices": "1.0.0",
           "SlotMachine.Models": "1.0.0"
         },
         "runtime": {
@@ -29,6 +30,14 @@
         },
         "runtime": {
           "SlotMachine.BusinessServices.dll": {}
+        }
+      },
+      "SlotMachine.ConsoleServices/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.ConsoleServices.dll": {}
         }
       },
       "SlotMachine.Models/1.0.0": {
@@ -59,6 +68,11 @@
       "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
     },
     "SlotMachine.BusinessServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.ConsoleServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

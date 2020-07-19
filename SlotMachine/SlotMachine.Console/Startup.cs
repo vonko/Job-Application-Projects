@@ -1,5 +1,5 @@
 ﻿using Autofac;
-using SlotMachine.ConsoleServices;
+using SlotMachine.BusinessServices;
 using SlotMachine.IoCContainer.Autofac;
 
 namespace SlotMachine.ConsoleInterface
@@ -11,7 +11,7 @@ namespace SlotMachine.ConsoleInterface
             var container = AutofacSetup.ConfigureDependencies();
             var gameEnvironment = container.Resolve<IGameEnvironment>();
 
-            gameEnvironment.RunGame();
+            gameEnvironment.StartGame();
         }
     }
 }

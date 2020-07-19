@@ -6,7 +6,6 @@
     //In case of need it can be extended to bring speci result type, for example to give information of a required behavior that must happen in the web layer like redirect
 
     public class Result<TData> : Result
-        where TData : class
     {
         public TData Data { get; set; }
 

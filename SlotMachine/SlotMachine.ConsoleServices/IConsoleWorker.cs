@@ -11,5 +11,7 @@ namespace SlotMachine.ConsoleServices
         decimal GetStakeAmount(decimal possibleAmount);
 
         void PrintSymbols(SymbolsSet symbolsSet);
+
+        void PrintBalance(decimal amountWon, decimal currentBalance);
     }
 }

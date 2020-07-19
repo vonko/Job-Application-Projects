@@ -66,6 +66,7 @@
       "SlotMachine.BusinessServices.Implementation/1.0.0": {
         "dependencies": {
           "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.ConsoleServices": "1.0.0",
           "SlotMachine.Models": "1.0.0"
         },
         "runtime": {
