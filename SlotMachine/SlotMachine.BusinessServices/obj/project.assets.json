@@ -26,19 +26,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "SlotMachine.BusinessServices/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
-        }
-      },
       "SlotMachine.Models/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -193,11 +180,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "SlotMachine.BusinessServices/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj",
-      "msbuildProject": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj"
-    },
     "SlotMachine.Models/1.0.0": {
       "type": "project",
       "path": "../SlotMachine.Models/SlotMachine.Models.csproj",
@@ -207,7 +189,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.1",
-      "SlotMachine.BusinessServices >= 1.0.0"
+      "SlotMachine.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -217,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj",
-      "projectName": "SlotMachine.BusinessServices.Implementation",
-      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj",
+      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj",
+      "projectName": "SlotMachine.BusinessServices",
+      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj",
       "packagesPath": "C:\\Users\\Vonko\\.nuget\\packages\\",
-      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\obj\\",
+      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -240,8 +222,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj"
             }
           }
         }

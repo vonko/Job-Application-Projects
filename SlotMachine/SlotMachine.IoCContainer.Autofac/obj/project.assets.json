@@ -88,7 +88,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "SlotMachine.BusinessServices": "1.0.0"
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SlotMachine.BusinessServices.Implementation.dll": {}
@@ -381,13 +382,13 @@
     },
     "SlotMachine.BusinessServices/1.0.0": {
       "type": "project",
-      "path": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj",
-      "msbuildProject": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj"
+      "path": "../SlotMachine.BusinessServices/SlotMachine.BusinessServices.csproj",
+      "msbuildProject": "../SlotMachine.BusinessServices/SlotMachine.BusinessServices.csproj"
     },
     "SlotMachine.BusinessServices.Implementation/1.0.0": {
       "type": "project",
-      "path": "../SlotMachine.Services.Implementation/SlotMachine.BusinessServices.Implementation.csproj",
-      "msbuildProject": "../SlotMachine.Services.Implementation/SlotMachine.BusinessServices.Implementation.csproj"
+      "path": "../SlotMachine.BusinessServices.Implementation/SlotMachine.BusinessServices.Implementation.csproj",
+      "msbuildProject": "../SlotMachine.BusinessServices.Implementation/SlotMachine.BusinessServices.Implementation.csproj"
     },
     "SlotMachine.ConsoleServices/1.0.0": {
       "type": "project",
@@ -445,17 +446,17 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices.Implementation\\SlotMachine.BusinessServices.Implementation.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices.Implementation\\SlotMachine.BusinessServices.Implementation.csproj"
+            },
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj"
+            },
             "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices.Implementation\\SlotMachine.ConsoleServices.Implementation.csproj": {
               "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices.Implementation\\SlotMachine.ConsoleServices.Implementation.csproj"
             },
             "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj": {
               "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj"
-            },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj"
-            },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj"
             }
           }
         }
