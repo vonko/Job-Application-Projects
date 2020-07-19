@@ -4,6 +4,7 @@ using FootballLeague.Models;
 using FootballLeague.Models.FootballTeam;
 using FootballLeague.Models.PlayedGame;
 using FootballLeague.Models.Rankings;
+using System.Collections.Generic;
 
 namespace FootballLeague.Services.Automapper
 {
@@ -22,6 +23,10 @@ namespace FootballLeague.Services.Automapper
             CreateMap<AddPlayedGameDto, PlayedGame>();
 
             CreateMap<PlayedGameDto, PlayedGame>();
+
+            CreateMap<FootballTeamDto, DataSourceDto>();
+
+            CreateMap<List<FootballTeamDto>, List<DataSourceDto>>();
         }
     }
 }

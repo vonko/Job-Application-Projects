@@ -73,6 +73,7 @@ namespace FootballLeague.Services.Implementation
             {
                 using (var scope = new TransactionScope(TransactionScopeOption.Required))
                 {
+                    gameDto.DatePlayed = DateTime.Now;
                     PlayedGameDto newGameDto = this.dalCotext.PlayedGamesRepository.AddGame(gameDto);
 
                     Result updatePointsResult = this.UpdateTeamsPoints(newGameDto, gameDeletion: false);

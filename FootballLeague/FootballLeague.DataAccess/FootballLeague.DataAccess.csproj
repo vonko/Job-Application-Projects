@@ -44,7 +44,6 @@
     <Compile Include="IDALContext.cs" />
     <Compile Include="IPlayedGamesRepository.cs" />
     <Compile Include="IFootballTeamsRepository.cs" />
-    <Compile Include="IRepository.cs" />
     <Compile Include="IRepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

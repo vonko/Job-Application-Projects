@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheProviderService.cs" />
+    <Compile Include="DataSourceService.cs" />
     <Compile Include="FootballTeamsService.cs" />
     <Compile Include="PlayedGamesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

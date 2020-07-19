@@ -30,6 +30,7 @@ namespace FootballLeagueAutofacSetup
             builder.RegisterType<FootballTeamsService>().As<IFootballTeamsService>().InstancePerLifetimeScope();
             builder.RegisterType<PlayedGamesService>().As<IPlayedGamesService>().InstancePerLifetimeScope();
             builder.RegisterType<RankingsService>().As<IRankingsService>().InstancePerLifetimeScope();
+            builder.RegisterType<DataSourceService>().As<IDataSourceService>().InstancePerLifetimeScope();
 
             //builder.RegisterType<IMapper>().As<Mapper>().InstancePerLifetimeScope();
 

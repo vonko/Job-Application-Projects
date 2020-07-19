@@ -48,6 +48,7 @@
     <Compile Include="Automapper\MapperExtensions.cs" />
     <Compile Include="Automapper\ServiceLayerMapperProfile.cs" />
     <Compile Include="ICacheProviderService.cs" />
+    <Compile Include="IDataSourceService.cs" />
     <Compile Include="IFootballTeamsService.cs" />
     <Compile Include="IPlayedGamesService.cs" />
     <Compile Include="IRankingsService.cs" />

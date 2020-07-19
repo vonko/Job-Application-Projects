@@ -1,4 +1,6 @@
-﻿namespace FootballLeague.Models.PlayedGame
+﻿using System;
+
+namespace FootballLeague.Models.PlayedGame
 {
     public class AddPlayedGameDto
     {
@@ -7,5 +9,7 @@
         public int AwayTeamId { get; set; }
 
         public GameResult Result { get; set; }
+
+        public DateTime DatePlayed { get; set; }
     }
 }
