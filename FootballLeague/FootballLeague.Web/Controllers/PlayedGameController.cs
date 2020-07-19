@@ -1,6 +1,8 @@
-﻿namespace FootballLeague.Web.Controllers
+﻿using System.Web.Mvc;
+
+namespace FootballLeague.Web.Controllers
 {
-    public class PlayedGameController : ControllerBase
+    public class PlayedGameController : Controller
     {
     }
 }

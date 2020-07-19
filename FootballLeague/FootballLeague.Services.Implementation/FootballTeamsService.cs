@@ -23,16 +23,13 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                FootballTeam footballTeam = this.dalCotext.FootballTeamsRepository.Find(teamId);
-                if (footballTeam == null)
+                FootballTeamDto teamDto = this.dalCotext.FootballTeamsRepository.Find(teamId);
+                if (teamDto == null)
                 {
                     result.SetError($"There is no team with #{ teamId }!");
 
                     return result;
                 }
-
-                FootballTeamDto teamDto = Mapper.Map<FootballTeam, FootballTeamDto>(footballTeam);
-
                 return result.SetData(teamDto);
             }
             catch (Exception ex)
@@ -49,8 +46,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                List<FootballTeam> teams = this.dalCotext.FootballTeamsRepository.All().ToList();
-                IList<FootballTeamDto> teamDtos = Mapper.Map<List<FootballTeam>, List<FootballTeamDto>>(teams);
+                IList<FootballTeamDto> teamDtos = this.dalCotext.FootballTeamsRepository.AllMaterialed();
 
                 return result.SetData(teamDtos);
             }
@@ -73,10 +69,8 @@ namespace FootballLeague.DataAccess.Implementation
             }
 
             try
-            { 
-                FootballTeam footballTeam = Mapper.Map<AddFootballTeamDto, FootballTeam>(teamDto);
-                FootballTeam addedTeam = this.dalCotext.FootballTeamsRepository.Create(footballTeam);
-                FootballTeamDto newTeamDto = Mapper.Map<FootballTeam, FootballTeamDto>(addedTeam);
+            {
+                FootballTeamDto newTeamDto = this.dalCotext.FootballTeamsRepository.AddTeam(teamDto);
 
                 result.SetSuccess("Team added successfully.");
 
@@ -99,7 +93,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                FootballTeam footballTeam = this.dalCotext.FootballTeamsRepository.Find(teamDto.ID);
+                FootballTeam footballTeam = this.dalCotext.FootballTeamsRepository.FindRough(teamDto.ID);
                 if (footballTeam == null)
                 {
                     return result.SetError($"There is no team with #{ teamDto.ID }!");

@@ -15,7 +15,7 @@ namespace FootballLeague.Web.Automapper
 
             CreateMap<FootballTeamDto, FootballTeamViewModel>();
 
-            CreateMap<IList<FootballTeamDto>, IList<FootballTeamViewModel>>();
+            CreateMap<List<FootballTeamDto>, List<FootballTeamViewModel>>();
 
             CreateMap<AddPlayedGameDto, AddPlayedGameViewModel>();
 

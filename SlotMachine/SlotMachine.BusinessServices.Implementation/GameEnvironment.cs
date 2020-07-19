@@ -27,6 +27,11 @@ namespace SlotMachine.BusinessServices.Implementation
                 canUserContinuePlaying = false;
             }
 
+            this.RunGameTurns(canUserContinuePlaying, currentBalance);
+        }
+
+        private void RunGameTurns(bool canUserContinuePlaying, decimal currentBalance)
+        {
             while (canUserContinuePlaying)
             {
                 Result<GameTurnResult> gameTurnResult = this.RunGame(currentBalance);

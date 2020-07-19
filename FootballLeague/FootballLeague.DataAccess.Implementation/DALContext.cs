@@ -1,4 +1,5 @@
 ﻿using FootballLeague.DataAccess.DbModels;
+using LiveResults.DataAccess;
 using System;
 
 namespace FootballLeague.DataAccess.Implementation
@@ -7,7 +8,7 @@ namespace FootballLeague.DataAccess.Implementation
     {
         private FootballLeagueDbContext dbContext;
 
-        private IRepository<FootballTeam> footballTeamRepository;
+        private IFootballTeamsRepository footballTeamRepository;
         private IRepository<PlayedGame> playedGamesRepository;
 
         public DALContext()
@@ -15,13 +16,13 @@ namespace FootballLeague.DataAccess.Implementation
             this.dbContext = new FootballLeagueDbContext();
         }
 
-        public IRepository<FootballTeam> FootballTeamsRepository
+        public IFootballTeamsRepository FootballTeamsRepository
         {
             get
             {
                 if (this.footballTeamRepository == null)
                 {
-                    this.footballTeamRepository = new Repository<FootballTeam>(this.dbContext);
+                    this.footballTeamRepository = new FootballTeamsRepository(this.dbContext);
                 }
 
                 return this.footballTeamRepository;

@@ -19,20 +19,15 @@ namespace FootballLeague.DataAccess.Implementation
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FootballTeam>()
-              .HasMany(s => s.PlayedGames)
-              .WithOptional()
-              .WillCascadeOnDelete(true);
-
             modelBuilder.Entity<PlayedGame>()
-               .HasRequired(m => m.HomeTeam)
-               .WithMany(t => t.PlayedGames)
-               .HasForeignKey(m => m.HomeTeamId)
-               .WillCascadeOnDelete(false);
+              .HasRequired(m => m.HomeTeam)
+              .WithMany(t => t.HomePlayedGames)
+              .HasForeignKey(m => m.HomeTeamId)
+              .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PlayedGame>()
                         .HasRequired(m => m.AwayTeam)
-                        .WithMany(t => t.PlayedGames)
+                        .WithMany(t => t.AwayPlayedGames)
                         .HasForeignKey(m => m.AwayTeamId)
                         .WillCascadeOnDelete(false);
         }

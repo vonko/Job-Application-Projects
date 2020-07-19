@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FootballLeague.DataAccess.DbModels\FootballLeague.DataAccess.DbModels.csproj">
-      <Project>{21615EF6-78D6-40C0-9276-AA03271FE7EF}</Project>
+      <Project>{21615ef6-78d6-40c0-9276-aa03271fe7ef}</Project>
       <Name>FootballLeague.DataAccess.DbModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\FootballLeague.DataAccess\FootballLeague.DataAccess.csproj">

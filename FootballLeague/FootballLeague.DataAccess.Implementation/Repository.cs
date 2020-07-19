@@ -51,15 +51,7 @@ namespace FootballLeague.DataAccess.Implementation
             return this.DbSet.Where(predicate).AsQueryable<TObject>();
         }
 
-        public virtual IQueryable<TObject> Filter(Expression<Func<TObject, bool>> filter, out int total, int index = 0, int size = 50)
-        {
-            int skipCount = index * size;
-            IQueryable<TObject> resetSet = filter != null ? this.DbSet.Where(filter).AsQueryable() : this.DbSet.AsQueryable();
-            resetSet = skipCount == 0 ? resetSet.Take(size) : resetSet.Skip(skipCount).Take(size);
-            total = resetSet.Count();
 
-            return resetSet.AsQueryable();
-        }
 
         public bool Contains(Expression<Func<TObject, bool>> predicate)
         {
@@ -104,18 +96,14 @@ namespace FootballLeague.DataAccess.Implementation
             }
         }
 
-        public virtual int Update(TObject TObject)
+        public virtual IQueryable<TObject> Filter(Expression<Func<TObject, bool>> filter, out int total, int index = 0, int size = 50)
         {
-            DbEntityEntry<TObject> entry = this.context.Entry(TObject);
-            this.DbSet.Attach(TObject);
-            entry.State = EntityState.Modified;
+            int skipCount = index * size;
+            IQueryable<TObject> resetSet = filter != null ? this.DbSet.Where(filter).AsQueryable() : this.DbSet.AsQueryable();
+            resetSet = skipCount == 0 ? resetSet.Take(size) : resetSet.Skip(skipCount).Take(size);
+            total = resetSet.Count();
 
-            if (!this.shareContext)
-            {
-                return this.context.SaveChanges();
-            }
-
-            return 0;
+            return resetSet.AsQueryable();
         }
 
         public virtual int Delete(TObject TObject)
@@ -136,6 +124,20 @@ namespace FootballLeague.DataAccess.Implementation
             {
                 this.DbSet.Remove(obj);
             }
+
+            if (!this.shareContext)
+            {
+                return this.context.SaveChanges();
+            }
+
+            return 0;
+        }
+
+        public virtual int Update(TObject TObject)
+        {
+            DbEntityEntry<TObject> entry = this.context.Entry(TObject);
+            this.DbSet.Attach(TObject);
+            entry.State = EntityState.Modified;
 
             if (!this.shareContext)
             {

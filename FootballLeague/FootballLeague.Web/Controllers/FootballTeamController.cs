@@ -70,7 +70,9 @@ namespace FootballLeague.Web.Controllers
                 return View();
             }
 
-            return View(result.Data);
+            UpdateFootballTeamViewModel viewModel = Mapper.Map<FootballTeamDto, UpdateFootballTeamViewModel>(result.Data);
+
+            return View(viewModel);
         }
 
         [HttpPost]

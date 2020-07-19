@@ -1,4 +1,5 @@
-﻿using SlotMachine.Models;
+﻿using SlotMachine.BusinessServices;
+using SlotMachine.Models;
 using SlotMachine.Models.Symbols;
 using System;
 
@@ -14,14 +15,14 @@ namespace SlotMachine.UserInteractionServices
 
         public decimal GetDepositAmount()
         {
-            return this.GetAmount(statementMessage: "Please deposit money you would like to play with:",
-                                  errorMessage: "Please enter a valid amount to deposit!");
+            return this.GetAmount(statementMessage: MessageConstants.DEPOSIT_MONEY_STATEMENT,
+                                  errorMessage: MessageConstants.ENTER_VALID_DEPOSIT_AMOUNT_ERROR);
         }
 
         public decimal GetStakeAmount(decimal possibleAmount)
         {
-            return this.GetAmount(statementMessage: "Enter stake amount:",
-                                  errorMessage: "Please enter a valid stake amount amount!",
+            return this.GetAmount(statementMessage: MessageConstants.ENTER_STAKE_AMOUNT_STATEMENT,
+                                  errorMessage: MessageConstants.STAKE_AMOUNT_ERROR,
                                   maxPossibleAmount: possibleAmount);      
         }
 

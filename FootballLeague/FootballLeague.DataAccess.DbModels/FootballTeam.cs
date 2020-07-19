@@ -14,6 +14,8 @@ namespace FootballLeague.DataAccess.DbModels
 
         public int Points { get; set; }
 
-        public virtual IList<PlayedGame> PlayedGames { get; set; }
+        public virtual ICollection<PlayedGame> HomePlayedGames { get; set; }
+
+        public virtual ICollection<PlayedGame> AwayPlayedGames { get; set; }
     }
 }

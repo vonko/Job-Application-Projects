@@ -32,3 +32,20 @@ D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementatio
 D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
 D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.dll
 D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.Implementation.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.Implementation.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\AutoMapper.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.DbModels.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Models.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\LiveResults.DataAccess.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\LiveResults.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Models.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\AutoMapper.xml
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csprojAssemblyReference.cache
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CoreCompileInputs.cache
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CopyComplete
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.pdb

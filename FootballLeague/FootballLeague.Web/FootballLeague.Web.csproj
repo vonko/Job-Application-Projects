@@ -247,7 +247,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\FootballTeam\AddFootballTeam.cshtml" />
     <Content Include="Views\FootballTeam\FootballTeams.cshtml" />
-    <Content Include="Views\FootballTeam\UpdateFootballTeamViewModel.cshtml" />
+    <Content Include="Views\FootballTeam\UpdateFootballTeam.cshtml" />
     <Content Include="Views\PlayedGame\PlayedGames.cshtml" />
     <Content Include="Views\PlayedGame\AddPlayedGame.cshtml" />
     <Content Include="Views\PlayedGame\UpdatePlayedGame.cshtml" />

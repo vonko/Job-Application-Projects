@@ -26,12 +26,12 @@ namespace SlotMachine.BusinessServices.Implementation
             Result result = new Result();
             if (depositAmount <= 0)
             {
-                return result.SetError($"Please enter a valid deposit amount!");
+                return result.SetError(MessageConstants.ENTER_VALID_DEPOSIT_AMOUNT_ERROR);
             }
 
             this.currentBalance = depositAmount;
 
-            return result.SetSuccess("Amount set successfully.");
+            return result.SetSuccess(MessageConstants.AMOUNT_SET_STATEMENT);
         }
 
         public Result<GameTurnResult> ExecuteGameTurn(decimal stakeAmount)
@@ -106,20 +106,20 @@ namespace SlotMachine.BusinessServices.Implementation
             Result result = new Result();
             if (this.currentBalance <= 0)
             {
-                return result.SetError("You do not have balance to continue playing!");
+                return result.SetError(MessageConstants.DO_NOT_HAVE_ENOUGH_BALANCE_ERROR);
             }
 
             if (stakeAmount <= 0)
             {
-                return result.SetError($"Please enter a valid stake amount!");
+                return result.SetError(MessageConstants.STAKE_AMOUNT_ERROR);
             }
 
             if (stakeAmount > this.currentBalance)
             {
-                return result.SetError($"Stake amount cannot be bigger than the remaining deposit amount!");
+                return result.SetError(MessageConstants.STAKE_AMOUNT_CANNOT_BE_BIGGER_THAN_DEPOSIT_ERROR);
             }
 
-            return result.SetSuccess("Data is valid.");
+            return result.SetSuccess(MessageConstants.VALID_DATA);
         }
     }
 }

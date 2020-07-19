@@ -196,7 +196,7 @@ namespace FootballLeague.Services.Implementation
             if (game.Result == GameResult.Won ||
                 game.Result == GameResult.Draw)
             {
-                FootballTeam homeTeam = this.dalCotext.FootballTeamsRepository.Find(game.HomeTeamId);
+                FootballTeam homeTeam = this.dalCotext.FootballTeamsRepository.FindRough(game.HomeTeamId);
                 if (homeTeam == null)
                 {
                     return result.SetError($"There is no team with id #{ game.HomeTeamId }!");
@@ -238,7 +238,7 @@ namespace FootballLeague.Services.Implementation
             if (game.Result == GameResult.Lost ||
                game.Result == GameResult.Draw)
             {
-                FootballTeam awayTeam = this.dalCotext.FootballTeamsRepository.Find(game.AwayTeamId);
+                FootballTeam awayTeam = this.dalCotext.FootballTeamsRepository.FindRough(game.AwayTeamId);
                 if (awayTeam == null)
                 {
                     return result.SetError($"There is no team with id #{ game.AwayTeamId }!");
