@@ -1,8 +1,8 @@
 ﻿using SlotMachine.Models;
 
-namespace SlotMachine.ConsoleServices
+namespace SlotMachine.UserInteractionServices
 {
-    public interface IConsoleWorker
+    public interface IUserInteracter
     {
         void WriteLine(string message);
 

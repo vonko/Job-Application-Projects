@@ -26,11 +26,11 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Deb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.csproj.CopyComplete
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.Implementation.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.Implementation.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.pdb

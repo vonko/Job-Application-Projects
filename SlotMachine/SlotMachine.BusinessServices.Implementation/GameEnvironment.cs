@@ -1,17 +1,17 @@
-﻿using SlotMachine.ConsoleServices;
-using SlotMachine.Models;
+﻿using SlotMachine.Models;
+using SlotMachine.UserInteractionServices;
 
 namespace SlotMachine.BusinessServices.Implementation
 {
     public class GameEnvironment : IGameEnvironment
     {
-        private readonly IConsoleWorker consoleWorker;
+        private readonly IUserInteracter userInteracter;
         private readonly IGameEngine gameEngine;
 
-        public GameEnvironment(IConsoleWorker consoleWorker,
+        public GameEnvironment(IUserInteracter userInteracter,
                                IGameEngine gameEngine)
         {
-            this.consoleWorker = consoleWorker;
+            this.userInteracter = userInteracter;
             this.gameEngine = gameEngine;
         }
 
@@ -19,11 +19,11 @@ namespace SlotMachine.BusinessServices.Implementation
         {
             bool canUserContinuePlaying = true;
 
-            decimal currentBalance = this.consoleWorker.GetDepositAmount();
+            decimal currentBalance = this.userInteracter.GetDepositAmount();
             Result setDepositResult = this.gameEngine.SetDepositAmount(currentBalance);
             if (setDepositResult.IsError)
             {
-                this.consoleWorker.WriteLine(setDepositResult.Message);
+                this.userInteracter.WriteLine(setDepositResult.Message);
                 canUserContinuePlaying = false;
             }
 
@@ -32,7 +32,7 @@ namespace SlotMachine.BusinessServices.Implementation
                 Result<GameTurnResult> gameTurnResult = this.RunGame(currentBalance);
                 if (gameTurnResult.IsError)
                 {
-                    this.consoleWorker.WriteLine(gameTurnResult.Message);
+                    this.userInteracter.WriteLine(gameTurnResult.Message);
                     break;
                 }
                 currentBalance = gameTurnResult.Data.CurrentBalance;
@@ -46,7 +46,7 @@ namespace SlotMachine.BusinessServices.Implementation
 
         private Result<GameTurnResult> RunGame(decimal depositAmount)
         {
-            decimal stakeAmount = this.consoleWorker.GetStakeAmount(depositAmount);
+            decimal stakeAmount = this.userInteracter.GetStakeAmount(depositAmount);
 
             Result<GameTurnResult> result = this.gameEngine.ExecuteGameTurn(stakeAmount);
             if (result.IsError)
@@ -54,8 +54,8 @@ namespace SlotMachine.BusinessServices.Implementation
                 return result;
             }
 
-            this.consoleWorker.PrintSymbols(result.Data.Symbols);
-            this.consoleWorker.PrintBalance(result.Data.AmountWon, result.Data.CurrentBalance);
+            this.userInteracter.PrintSymbols(result.Data.Symbols);
+            this.userInteracter.PrintBalance(result.Data.AmountWon, result.Data.CurrentBalance);
 
             return result;
         }

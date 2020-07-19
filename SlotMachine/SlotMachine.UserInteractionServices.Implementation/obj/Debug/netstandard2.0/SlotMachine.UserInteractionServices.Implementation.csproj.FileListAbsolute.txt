@@ -1,0 +1,16 @@
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.deps.json
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.Models.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.csprojAssemblyReference.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.csproj.CoreCompileInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.AssemblyInfoInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.AssemblyInfo.cs
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.csproj.CopyComplete
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.UserInteractionServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.UserInteractionServices.Implementation.pdb

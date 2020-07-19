@@ -26,5 +26,5 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementat
 D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.BusinessServices.Implementation.csproj.CopyComplete
-D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.BusinessServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.UserInteractionServices.pdb

@@ -1,8 +1,7 @@
 ﻿using Autofac;
 using SlotMachine.BusinessServices;
 using SlotMachine.BusinessServices.Implementation;
-using SlotMachine.ConsoleServices;
-using SlotMachine.ConsoleServices.Implementation;
+using SlotMachine.UserInteractionServices;
 
 namespace SlotMachine.IoCContainer.Autofac
 {
@@ -12,7 +11,7 @@ namespace SlotMachine.IoCContainer.Autofac
         {
             ContainerBuilder builder = new ContainerBuilder();
 
-            builder.RegisterType<ConsoleWorker>().As<IConsoleWorker>().InstancePerLifetimeScope();
+            builder.RegisterType<UserInteracter>().As<IUserInteracter>().InstancePerLifetimeScope();
             builder.RegisterType<GameEnvironment>().As<IGameEnvironment>().InstancePerLifetimeScope();
             builder.RegisterType<SymbolsRollGenerator>().As<ISymbolsRollGenerator>().InstancePerLifetimeScope();
             builder.RegisterType<NumberRowsAndColumnsProvider>().As<INumberRowsAndColumnsProvider>().InstancePerLifetimeScope();

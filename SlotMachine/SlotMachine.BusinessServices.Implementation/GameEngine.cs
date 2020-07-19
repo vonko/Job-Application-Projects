@@ -1,6 +1,4 @@
 ﻿using SlotMachine.Models;
-using System;
-using System.Collections.Generic;
 
 namespace SlotMachine.BusinessServices.Implementation
 {
@@ -120,11 +118,9 @@ namespace SlotMachine.BusinessServices.Implementation
 
         private decimal UpdateCurrentBalance(decimal stakeAmount, decimal amountWon, decimal coefficent)
         {
-            if (coefficent == 0)
-            {
-                this.currentBalance -= stakeAmount;
-            }
-            else
+            this.currentBalance -= stakeAmount;
+
+            if (coefficent > 0)
             {
                 amountWon = stakeAmount * coefficent;
                 this.currentBalance += amountWon;

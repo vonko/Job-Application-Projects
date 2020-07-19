@@ -34,11 +34,11 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.ConsoleInterface.csproj.CopyComplete
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.ConsoleInterface.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.ConsoleInterface.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.ConsoleServices.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.ConsoleServices.Implementation.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.ConsoleServices.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.ConsoleServices.Implementation.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.BusinessServices.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.BusinessServices.Implementation.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.BusinessServices.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.BusinessServices.Implementation.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.UserInteractionServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.UserInteractionServices.Implementation.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.UserInteractionServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.UserInteractionServices.Implementation.pdb

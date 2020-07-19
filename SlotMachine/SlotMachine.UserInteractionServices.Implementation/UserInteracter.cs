@@ -1,9 +1,10 @@
 ﻿using SlotMachine.Models;
 using System;
 
-namespace SlotMachine.ConsoleServices.Implementation
+namespace SlotMachine.UserInteractionServices
 {
-    public class ConsoleWorker : IConsoleWorker
+    //independent console interaction interface so its implementation can be replaced by other means of communication with the user
+    public class UserInteracter : IUserInteracter
     {
         public void WriteLine(string message)
         {

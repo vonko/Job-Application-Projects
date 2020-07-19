@@ -89,41 +89,14 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "SlotMachine.BusinessServices": "1.0.0",
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.Models": "1.0.0"
+          "SlotMachine.Models": "1.0.0",
+          "SlotMachine.UserInteractionServices": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SlotMachine.BusinessServices.Implementation.dll": {}
         },
         "runtime": {
           "bin/placeholder/SlotMachine.BusinessServices.Implementation.dll": {}
-        }
-      },
-      "SlotMachine.ConsoleServices/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.ConsoleServices.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.ConsoleServices.dll": {}
-        }
-      },
-      "SlotMachine.ConsoleServices.Implementation/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.BusinessServices": "1.0.0",
-          "SlotMachine.ConsoleServices": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.ConsoleServices.Implementation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.ConsoleServices.Implementation.dll": {}
         }
       },
       "SlotMachine.Models/1.0.0": {
@@ -134,6 +107,33 @@
         },
         "runtime": {
           "bin/placeholder/SlotMachine.Models.dll": {}
+        }
+      },
+      "SlotMachine.UserInteractionServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.UserInteractionServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.UserInteractionServices.dll": {}
+        }
+      },
+      "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.UserInteractionServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.UserInteractionServices.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.UserInteractionServices.Implementation.dll": {}
         }
       }
     }
@@ -391,20 +391,20 @@
       "path": "../SlotMachine.BusinessServices.Implementation/SlotMachine.BusinessServices.Implementation.csproj",
       "msbuildProject": "../SlotMachine.BusinessServices.Implementation/SlotMachine.BusinessServices.Implementation.csproj"
     },
-    "SlotMachine.ConsoleServices/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj",
-      "msbuildProject": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj"
-    },
-    "SlotMachine.ConsoleServices.Implementation/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.ConsoleServices.Implementation/SlotMachine.ConsoleServices.Implementation.csproj",
-      "msbuildProject": "../SlotMachine.ConsoleServices.Implementation/SlotMachine.ConsoleServices.Implementation.csproj"
-    },
     "SlotMachine.Models/1.0.0": {
       "type": "project",
       "path": "../SlotMachine.Models/SlotMachine.Models.csproj",
       "msbuildProject": "../SlotMachine.Models/SlotMachine.Models.csproj"
+    },
+    "SlotMachine.UserInteractionServices/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.UserInteractionServices/SlotMachine.UserInteractionServices.csproj",
+      "msbuildProject": "../SlotMachine.UserInteractionServices/SlotMachine.UserInteractionServices.csproj"
+    },
+    "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.UserInteractionServices.Implementation/SlotMachine.UserInteractionServices.Implementation.csproj",
+      "msbuildProject": "../SlotMachine.UserInteractionServices.Implementation/SlotMachine.UserInteractionServices.Implementation.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -413,8 +413,8 @@
       "NETStandard.Library >= 2.0.1",
       "SlotMachine.BusinessServices >= 1.0.0",
       "SlotMachine.BusinessServices.Implementation >= 1.0.0",
-      "SlotMachine.ConsoleServices >= 1.0.0",
-      "SlotMachine.ConsoleServices.Implementation >= 1.0.0"
+      "SlotMachine.UserInteractionServices >= 1.0.0",
+      "SlotMachine.UserInteractionServices.Implementation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -453,11 +453,11 @@
             "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj": {
               "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.BusinessServices\\SlotMachine.BusinessServices.csproj"
             },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices.Implementation\\SlotMachine.ConsoleServices.Implementation.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices.Implementation\\SlotMachine.ConsoleServices.Implementation.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices.Implementation\\SlotMachine.UserInteractionServices.Implementation.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices.Implementation\\SlotMachine.UserInteractionServices.Implementation.csproj"
             },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices\\SlotMachine.UserInteractionServices.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices\\SlotMachine.UserInteractionServices.csproj"
             }
           }
         }

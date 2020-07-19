@@ -11,8 +11,8 @@
   <ItemGroup>
     <ProjectReference Include="..\SlotMachine.BusinessServices.Implementation\SlotMachine.BusinessServices.Implementation.csproj" />
     <ProjectReference Include="..\SlotMachine.BusinessServices\SlotMachine.BusinessServices.csproj" />
-    <ProjectReference Include="..\SlotMachine.ConsoleServices.Implementation\SlotMachine.ConsoleServices.Implementation.csproj" />
-    <ProjectReference Include="..\SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj" />
+    <ProjectReference Include="..\SlotMachine.UserInteractionServices.Implementation\SlotMachine.UserInteractionServices.Implementation.csproj" />
+    <ProjectReference Include="..\SlotMachine.UserInteractionServices\SlotMachine.UserInteractionServices.csproj" />
   </ItemGroup>
 
 </Project>

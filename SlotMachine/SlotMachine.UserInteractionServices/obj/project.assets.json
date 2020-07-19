@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj",
-      "projectName": "SlotMachine.ConsoleServices",
-      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj",
+      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices\\SlotMachine.UserInteractionServices.csproj",
+      "projectName": "SlotMachine.UserInteractionServices",
+      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices\\SlotMachine.UserInteractionServices.csproj",
       "packagesPath": "C:\\Users\\Vonko\\.nuget\\packages\\",
-      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\obj\\",
+      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.UserInteractionServices\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -7,15 +7,14 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "SlotMachine.BusinessServices.Implementation/1.0.0": {
+      "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.1",
           "SlotMachine.BusinessServices": "1.0.0",
-          "SlotMachine.Models": "1.0.0",
           "SlotMachine.UserInteractionServices": "1.0.0"
         },
         "runtime": {
-          "SlotMachine.BusinessServices.Implementation.dll": {}
+          "SlotMachine.UserInteractionServices.Implementation.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
@@ -48,7 +47,7 @@
     }
   },
   "libraries": {
-    "SlotMachine.BusinessServices.Implementation/1.0.0": {
+    "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

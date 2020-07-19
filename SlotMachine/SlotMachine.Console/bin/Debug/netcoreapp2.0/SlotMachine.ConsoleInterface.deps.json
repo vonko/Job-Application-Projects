@@ -54,28 +54,11 @@
       "SlotMachine.BusinessServices.Implementation/1.0.0": {
         "dependencies": {
           "SlotMachine.BusinessServices": "1.0.0",
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.Models": "1.0.0"
+          "SlotMachine.Models": "1.0.0",
+          "SlotMachine.UserInteractionServices": "1.0.0"
         },
         "runtime": {
           "SlotMachine.BusinessServices.Implementation.dll": {}
-        }
-      },
-      "SlotMachine.ConsoleServices/1.0.0": {
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "runtime": {
-          "SlotMachine.ConsoleServices.dll": {}
-        }
-      },
-      "SlotMachine.ConsoleServices.Implementation/1.0.0": {
-        "dependencies": {
-          "SlotMachine.BusinessServices": "1.0.0",
-          "SlotMachine.ConsoleServices": "1.0.0"
-        },
-        "runtime": {
-          "SlotMachine.ConsoleServices.Implementation.dll": {}
         }
       },
       "SlotMachine.IoCContainer.Autofac/1.0.0": {
@@ -83,8 +66,8 @@
           "Autofac": "5.2.0",
           "SlotMachine.BusinessServices": "1.0.0",
           "SlotMachine.BusinessServices.Implementation": "1.0.0",
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.ConsoleServices.Implementation": "1.0.0"
+          "SlotMachine.UserInteractionServices": "1.0.0",
+          "SlotMachine.UserInteractionServices.Implementation": "1.0.0"
         },
         "runtime": {
           "SlotMachine.IoCContainer.Autofac.dll": {}
@@ -93,6 +76,23 @@
       "SlotMachine.Models/1.0.0": {
         "runtime": {
           "SlotMachine.Models.dll": {}
+        }
+      },
+      "SlotMachine.UserInteractionServices/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.UserInteractionServices.dll": {}
+        }
+      },
+      "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
+        "dependencies": {
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.UserInteractionServices": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.UserInteractionServices.Implementation.dll": {}
         }
       }
     }
@@ -141,22 +141,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SlotMachine.ConsoleServices/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SlotMachine.ConsoleServices.Implementation/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "SlotMachine.IoCContainer.Autofac/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "SlotMachine.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.UserInteractionServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.UserInteractionServices.Implementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
