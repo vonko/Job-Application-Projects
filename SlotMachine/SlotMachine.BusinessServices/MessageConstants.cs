@@ -17,5 +17,7 @@
         public const string STAKE_AMOUNT_CANNOT_BE_BIGGER_THAN_DEPOSIT_ERROR = "Stake amount cannot be bigger than the remaining deposit amount!";
 
         public const string VALID_DATA = "Data is valid.";
+
+        public const string CHANCE_GENERATING_ERROR = "Chance generation error.";
     }
 }

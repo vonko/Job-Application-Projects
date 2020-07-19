@@ -46,6 +46,7 @@ namespace SlotMachine.UserInteractionServices
             Console.WriteLine($"You have won: { gameTurnBalance.AmountWon }");
             Console.Write($"Current balance is: { gameTurnBalance.CurrentBalance }");
             Console.WriteLine();
+            Console.WriteLine();
         }
 
         private decimal GetAmount(string statementMessage, string errorMessage, decimal maxPossibleAmount = int.MaxValue)
@@ -55,6 +56,7 @@ namespace SlotMachine.UserInteractionServices
             decimal amount = 0;
             bool valid = false;
 
+            //try to get amount until valid number is entered
             while (!valid)
             {
                 valid = this.TryGetAmount(out amount, maxPossibleAmount);

@@ -1,4 +1,6 @@
-﻿namespace FootballLeague.Models
+﻿using FootballLeague.Models.FootballTeam;
+
+namespace FootballLeague.Models.PlayedGame
 {
     public class PlayedGameDto : AddPlayedGameDto
     {

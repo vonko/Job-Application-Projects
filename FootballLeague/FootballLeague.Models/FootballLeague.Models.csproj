@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddFootballTeamDto.cs" />
-    <Compile Include="AddPlayedGameDto.cs" />
+    <Compile Include="FootballTeam\AddFootballTeamDto.cs" />
+    <Compile Include="PlayedGame\AddPlayedGameDto.cs" />
     <Compile Include="DisplayStatus.cs" />
-    <Compile Include="FootballTeamDto.cs" />
-    <Compile Include="GameResult.cs" />
-    <Compile Include="PlayedGameDto.cs" />
+    <Compile Include="FootballTeam\FootballTeamDto.cs" />
+    <Compile Include="PlayedGame\GameResult.cs" />
+    <Compile Include="PlayedGame\PlayedGameDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
-    <Compile Include="UpdateFootballTeamDto.cs" />
+    <Compile Include="FootballTeam\UpdateFootballTeamDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

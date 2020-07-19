@@ -1,4 +1,4 @@
-﻿namespace FootballLeague.Models
+﻿namespace FootballLeague.Models.PlayedGame
 {
     public enum GameResult
     {

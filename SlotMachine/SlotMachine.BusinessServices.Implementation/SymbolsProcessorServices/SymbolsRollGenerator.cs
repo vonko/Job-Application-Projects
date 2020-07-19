@@ -80,7 +80,7 @@ namespace SlotMachine.BusinessServices.Implementation.SymbolsProcessorServices
             }
             else
             {
-                throw new ApplicationException("Chance generation error.");
+                throw new ApplicationException(MessageConstants.CHANCE_GENERATING_ERROR);
             }
 
             return symbolRolled;
