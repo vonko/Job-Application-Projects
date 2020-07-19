@@ -43,6 +43,8 @@ namespace SlotMachine.BusinessServices.Implementation
                 return result;
             }
 
+            this.currentBalance -= stakeAmount;
+
             Result<SymbolsSet> generateSymbolsResult = this.symbolsGenerator.GenerateSymbols(this.rowsAndColumnsProvider.NumberRowsPerTurn,
                                                                                              this.rowsAndColumnsProvider.NumberColumns);
             if (generateSymbolsResult.IsError)
@@ -83,7 +85,8 @@ namespace SlotMachine.BusinessServices.Implementation
 
             decimal coefficent = coefficientsResult.Data;
             decimal amountWon = stakeAmount * coefficent;
-            this.UpdateCurrentBalance(stakeAmount, amountWon, coefficent);
+
+            this.currentBalance += amountWon;
 
             GameTurnResult gameTurnResult = new GameTurnResult()
             {
@@ -114,19 +117,6 @@ namespace SlotMachine.BusinessServices.Implementation
             }
 
             return result.SetSuccess("Data is valid.");
-        }
-
-        private decimal UpdateCurrentBalance(decimal stakeAmount, decimal amountWon, decimal coefficent)
-        {
-            this.currentBalance -= stakeAmount;
-
-            if (coefficent > 0)
-            {
-                amountWon = stakeAmount * coefficent;
-                this.currentBalance += amountWon;
-            }
-
-            return amountWon;
         }
     }
 }
