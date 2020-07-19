@@ -6,3 +6,12 @@ D:\Job Application Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard
 D:\Job Application Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.AssemblyInfo.cs
 D:\Job Application Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.dll
 D:\Job Application Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\bin\Debug\netstandard2.0\SlotMachine.Models.deps.json
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\bin\Debug\netstandard2.0\SlotMachine.Models.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.csprojAssemblyReference.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.csproj.CoreCompileInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.AssemblyInfoInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.AssemblyInfo.cs
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Models\obj\Debug\netstandard2.0\SlotMachine.Models.pdb

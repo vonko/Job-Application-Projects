@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SlotMachine.ConsoleServices.Implementation\SlotMachine.ConsoleServices.Implementation.csproj" />
+    <ProjectReference Include="..\SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj" />
     <ProjectReference Include="..\SlotMachine.Services.Implementation\SlotMachine.Services.Implementation.csproj" />
     <ProjectReference Include="..\SlotMachine.Services\SlotMachine.Services.csproj" />
   </ItemGroup>

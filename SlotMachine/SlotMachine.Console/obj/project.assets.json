@@ -242,11 +242,40 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "SlotMachine.ConsoleServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.ConsoleServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.ConsoleServices.dll": {}
+        }
+      },
+      "SlotMachine.ConsoleServices.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.ConsoleServices": "1.0.0",
+          "SlotMachine.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.ConsoleServices.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.ConsoleServices.Implementation.dll": {}
+        }
+      },
       "SlotMachine.IoCContainer.Autofac/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Autofac": "5.2.0",
+          "SlotMachine.ConsoleServices": "1.0.0",
+          "SlotMachine.ConsoleServices.Implementation": "1.0.0",
           "SlotMachine.Services": "1.0.0",
           "SlotMachine.Services.Implementation": "1.0.0"
         },
@@ -854,6 +883,16 @@
         "version.txt"
       ]
     },
+    "SlotMachine.ConsoleServices/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj",
+      "msbuildProject": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj"
+    },
+    "SlotMachine.ConsoleServices.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.ConsoleServices.Implementation/SlotMachine.ConsoleServices.Implementation.csproj",
+      "msbuildProject": "../SlotMachine.ConsoleServices.Implementation/SlotMachine.ConsoleServices.Implementation.csproj"
+    },
     "SlotMachine.IoCContainer.Autofac/1.0.0": {
       "type": "project",
       "path": "../SlotMachine.IoCContainer.Autofac/SlotMachine.IoCContainer.Autofac.csproj",
@@ -877,11 +916,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Autofac >= 5.2.0",
       "Microsoft.NETCore.App >= 2.0.0",
+      "SlotMachine.ConsoleServices >= 1.0.0",
       "SlotMachine.IoCContainer.Autofac >= 1.0.0",
-      "SlotMachine.Models >= 1.0.0",
-      "SlotMachine.Services >= 1.0.0"
+      "SlotMachine.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -891,11 +929,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Console\\SlotMachine.ConsoleInterface.csproj",
+      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Console\\SlotMachine.ConsoleInterface.csproj",
       "projectName": "SlotMachine.ConsoleInterface",
-      "projectPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Console\\SlotMachine.ConsoleInterface.csproj",
+      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Console\\SlotMachine.ConsoleInterface.csproj",
       "packagesPath": "C:\\Users\\Vonko\\.nuget\\packages\\",
-      "outputPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Console\\obj\\",
+      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -914,14 +952,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\Job Application Projects\\SlotMachine\\SlotMachine.IoCContainer.Autofac\\SlotMachine.IoCContainer.Autofac.csproj": {
-              "projectPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.IoCContainer.Autofac\\SlotMachine.IoCContainer.Autofac.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj"
             },
-            "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj": {
-              "projectPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.IoCContainer.Autofac\\SlotMachine.IoCContainer.Autofac.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.IoCContainer.Autofac\\SlotMachine.IoCContainer.Autofac.csproj"
             },
-            "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj": {
-              "projectPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj"
             }
           }
         }
@@ -935,10 +973,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Autofac": {
-            "target": "Package",
-            "version": "[5.2.0, )"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.0.0, )",

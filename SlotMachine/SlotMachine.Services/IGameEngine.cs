@@ -6,6 +6,6 @@ namespace SlotMachine.Services
     {
         Result SetDepositAmount(decimal depositAmount);
 
-        Result ExecuteGameTurn(decimal stakeAmount);
+        Result<GameTurnResult> ExecuteGameTurn(decimal stakeAmount);
     }
 }

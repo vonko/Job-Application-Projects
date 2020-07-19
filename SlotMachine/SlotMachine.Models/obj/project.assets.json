@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj",
+      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj",
       "projectName": "SlotMachine.Models",
-      "projectPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj",
+      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\SlotMachine.Models.csproj",
       "packagesPath": "C:\\Users\\Vonko\\.nuget\\packages\\",
-      "outputPath": "D:\\Job Application Projects\\SlotMachine\\SlotMachine.Models\\obj\\",
+      "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
