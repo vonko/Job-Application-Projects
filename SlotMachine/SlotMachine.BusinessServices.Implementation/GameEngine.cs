@@ -1,4 +1,5 @@
 ﻿using SlotMachine.Models;
+using System;
 using System.Collections.Generic;
 
 namespace SlotMachine.BusinessServices.Implementation
@@ -34,25 +35,9 @@ namespace SlotMachine.BusinessServices.Implementation
 
         public Result<GameTurnResult> ExecuteGameTurn(decimal stakeAmount)
         {
-            Result<GameTurnResult> result = new Result<GameTurnResult>();
-            if (this.currentBalance <= 0)
+            Result<GameTurnResult> result = this.ValidateStakeAmount(stakeAmount);
+            if (result.IsError)
             {
-                result.SetError("You do not have balance to continue playing!");
-
-                return result;
-            }
-
-            if (stakeAmount <= 0)
-            {
-                result.SetError($"Please enter a valid stake amount!");
-
-                return result;
-            }
-
-            if (stakeAmount > this.currentBalance)
-            {
-                result.SetError($"Stake amount cannot be bigger than the remaining deposit amount!");
-
                 return result;
             }
 
@@ -106,6 +91,29 @@ namespace SlotMachine.BusinessServices.Implementation
             };
 
             return result.SetData(gameTurnResult);
+        }
+
+        private Result<GameTurnResult> ValidateStakeAmount(decimal stakeAmount)
+        {
+            Result<GameTurnResult> result = new Result<GameTurnResult>();
+            if (this.currentBalance <= 0)
+            {
+                result.SetError("You do not have balance to continue playing!");
+            }
+
+            if (stakeAmount <= 0)
+            {
+                result.SetError($"Please enter a valid stake amount!");
+            }
+
+            if (stakeAmount > this.currentBalance)
+            {
+                result.SetError($"Stake amount cannot be bigger than the remaining deposit amount!");
+            }
+
+            result.SetSuccess("Data is valid.");
+
+            return result;
         }
 
         private decimal UpdateCurrentBalance(decimal stakeAmount, decimal amountWon, decimal coefficent)
