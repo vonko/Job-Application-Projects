@@ -1,7 +1,8 @@
-﻿using SlotMachine.Models;
+﻿using SlotMachine.BusinessServices.Providers;
+using SlotMachine.Models.Symbols;
 using System.Collections.Generic;
 
-namespace SlotMachine.BusinessServices.Implementation
+namespace SlotMachine.BusinessServices.Implementation.Providers
 {
     public class SymbolsChanceProvider : ISymbolsChanceProvider
     {

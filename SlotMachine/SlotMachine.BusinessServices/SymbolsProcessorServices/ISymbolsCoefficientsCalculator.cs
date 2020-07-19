@@ -1,6 +1,7 @@
 ﻿using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 
-namespace SlotMachine.BusinessServices
+namespace SlotMachine.BusinessServices.SymbolsProcessorServices
 {
     public interface ISymbolsCoefficientsCalculator
     {

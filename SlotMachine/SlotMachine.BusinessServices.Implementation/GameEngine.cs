@@ -1,4 +1,7 @@
-﻿using SlotMachine.Models;
+﻿using SlotMachine.BusinessServices.Providers;
+using SlotMachine.BusinessServices.SymbolsProcessorServices;
+using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 
 namespace SlotMachine.BusinessServices.Implementation
 {

@@ -1,4 +1,5 @@
 ﻿using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 
 namespace SlotMachine.UserInteractionServices
 {
@@ -12,6 +13,6 @@ namespace SlotMachine.UserInteractionServices
 
         void PrintSymbols(SymbolsSet symbolsSet);
 
-        void PrintBalance(decimal amountWon, decimal currentBalance);
+        void PrintBalance(GameTurnBalance gameTurnBalance);
     }
 }

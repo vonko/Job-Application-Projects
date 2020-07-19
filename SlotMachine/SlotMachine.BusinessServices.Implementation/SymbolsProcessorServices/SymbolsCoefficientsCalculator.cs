@@ -1,9 +1,11 @@
-﻿using SlotMachine.Models;
-using System;
+﻿using SlotMachine.BusinessServices.Providers;
+using SlotMachine.BusinessServices.SymbolsProcessorServices;
+using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SlotMachine.BusinessServices.Implementation
+namespace SlotMachine.BusinessServices.Implementation.SymbolsProcessorServices
 {
     public class SymbolsCoefficientsCalculator : ISymbolsCoefficientsCalculator
     {

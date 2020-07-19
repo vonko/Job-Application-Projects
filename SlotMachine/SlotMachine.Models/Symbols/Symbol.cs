@@ -1,4 +1,4 @@
-﻿namespace SlotMachine.Models
+﻿namespace SlotMachine.Models.Symbols
 {
     public enum Symbol
     {

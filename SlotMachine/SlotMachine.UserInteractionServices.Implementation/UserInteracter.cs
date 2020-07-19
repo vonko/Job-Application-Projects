@@ -1,4 +1,5 @@
 ﻿using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 using System;
 
 namespace SlotMachine.UserInteractionServices
@@ -39,10 +40,10 @@ namespace SlotMachine.UserInteractionServices
             Console.WriteLine();
         }
 
-        public void PrintBalance(decimal amountWon, decimal currentBalance)
+        public void PrintBalance(GameTurnBalance gameTurnBalance)
         {
-            Console.WriteLine($"You have won: { amountWon }");
-            Console.Write($"Current balance is: { currentBalance }");
+            Console.WriteLine($"You have won: { gameTurnBalance.AmountWon }");
+            Console.Write($"Current balance is: { gameTurnBalance.CurrentBalance }");
             Console.WriteLine();
         }
 

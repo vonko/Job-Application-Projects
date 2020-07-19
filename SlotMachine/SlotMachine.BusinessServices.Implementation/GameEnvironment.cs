@@ -55,7 +55,7 @@ namespace SlotMachine.BusinessServices.Implementation
             }
 
             this.userInteracter.PrintSymbols(result.Data.Symbols);
-            this.userInteracter.PrintBalance(result.Data.AmountWon, result.Data.CurrentBalance);
+            this.userInteracter.PrintBalance(result.Data);
 
             return result;
         }

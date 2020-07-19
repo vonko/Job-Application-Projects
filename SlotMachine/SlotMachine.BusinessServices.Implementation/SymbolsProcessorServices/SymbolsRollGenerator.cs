@@ -1,7 +1,10 @@
-﻿using SlotMachine.Models;
+﻿using SlotMachine.BusinessServices.Providers;
+using SlotMachine.BusinessServices.SymbolsProcessorServices;
+using SlotMachine.Models;
+using SlotMachine.Models.Symbols;
 using System;
 
-namespace SlotMachine.BusinessServices.Implementation
+namespace SlotMachine.BusinessServices.Implementation.SymbolsProcessorServices
 {
     public class SymbolsRollGenerator : ISymbolsRollGenerator
     {

@@ -1,6 +1,10 @@
 ﻿using Autofac;
 using SlotMachine.BusinessServices;
 using SlotMachine.BusinessServices.Implementation;
+using SlotMachine.BusinessServices.Implementation.Providers;
+using SlotMachine.BusinessServices.Implementation.SymbolsProcessorServices;
+using SlotMachine.BusinessServices.Providers;
+using SlotMachine.BusinessServices.SymbolsProcessorServices;
 using SlotMachine.UserInteractionServices;
 
 namespace SlotMachine.IoCContainer.Autofac

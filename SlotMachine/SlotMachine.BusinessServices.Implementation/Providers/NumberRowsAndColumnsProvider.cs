@@ -1,4 +1,6 @@
-﻿namespace SlotMachine.BusinessServices.Implementation
+﻿using SlotMachine.BusinessServices.Providers;
+
+namespace SlotMachine.BusinessServices.Implementation.Providers
 {
     public class NumberRowsAndColumnsProvider : INumberRowsAndColumnsProvider
     {

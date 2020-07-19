@@ -1,4 +1,4 @@
-﻿namespace SlotMachine.BusinessServices
+﻿namespace SlotMachine.BusinessServices.Providers
 {
     public interface INumberRowsAndColumnsProvider
     {

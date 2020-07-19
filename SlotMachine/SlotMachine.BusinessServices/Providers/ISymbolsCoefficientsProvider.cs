@@ -1,7 +1,7 @@
-﻿using SlotMachine.Models;
+﻿using SlotMachine.Models.Symbols;
 using System.Collections.Generic;
 
-namespace SlotMachine.BusinessServices
+namespace SlotMachine.BusinessServices.Providers
 {
     public interface ISymbolsCoefficientsProvider
     {

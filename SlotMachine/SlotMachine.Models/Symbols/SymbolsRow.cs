@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SlotMachine.Models
+namespace SlotMachine.Models.Symbols
 {
     public class SymbolsRow
     {

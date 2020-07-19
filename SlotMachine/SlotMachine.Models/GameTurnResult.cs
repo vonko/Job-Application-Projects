@@ -1,11 +1,9 @@
-﻿namespace SlotMachine.Models
+﻿using SlotMachine.Models.Symbols;
+
+namespace SlotMachine.Models
 {
-    public class GameTurnResult
+    public class GameTurnResult : GameTurnBalance
     {
         public SymbolsSet Symbols { get; set; }
-
-        public decimal AmountWon { get; set; }
-
-        public decimal CurrentBalance { get; set; }
     }
 }
