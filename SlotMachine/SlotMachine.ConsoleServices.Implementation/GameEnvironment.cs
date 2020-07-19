@@ -1,5 +1,5 @@
-﻿using SlotMachine.Models;
-using SlotMachine.Services;
+﻿using SlotMachine.BusinessServices;
+using SlotMachine.Models;
 
 namespace SlotMachine.ConsoleServices.Implementation
 {

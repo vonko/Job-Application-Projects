@@ -8,9 +8,9 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementati
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.deps.json
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.Services.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.Services.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.csproj.CopyComplete
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\obj\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.ConsoleServices.Implementation\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.pdb

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SlotMachine.Services\SlotMachine.Services.csproj" />
+    <ProjectReference Include="..\SlotMachine.Services\SlotMachine.BusinessServices.csproj" />
   </ItemGroup>
 
 </Project>

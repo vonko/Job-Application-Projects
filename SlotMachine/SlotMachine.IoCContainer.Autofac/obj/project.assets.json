@@ -71,6 +71,32 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "SlotMachine.BusinessServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
+        }
+      },
+      "SlotMachine.BusinessServices.Implementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.BusinessServices": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.BusinessServices.Implementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.BusinessServices.Implementation.dll": {}
+        }
+      },
       "SlotMachine.ConsoleServices/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -88,8 +114,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.Services": "1.0.0"
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.ConsoleServices": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SlotMachine.ConsoleServices.Implementation.dll": {}
@@ -106,32 +132,6 @@
         },
         "runtime": {
           "bin/placeholder/SlotMachine.Models.dll": {}
-        }
-      },
-      "SlotMachine.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.Services.dll": {}
-        }
-      },
-      "SlotMachine.Services.Implementation/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.Services.Implementation.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.Services.Implementation.dll": {}
         }
       }
     }
@@ -379,6 +379,16 @@
         "version.txt"
       ]
     },
+    "SlotMachine.BusinessServices/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj",
+      "msbuildProject": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj"
+    },
+    "SlotMachine.BusinessServices.Implementation/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.Services.Implementation/SlotMachine.BusinessServices.Implementation.csproj",
+      "msbuildProject": "../SlotMachine.Services.Implementation/SlotMachine.BusinessServices.Implementation.csproj"
+    },
     "SlotMachine.ConsoleServices/1.0.0": {
       "type": "project",
       "path": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj",
@@ -393,26 +403,16 @@
       "type": "project",
       "path": "../SlotMachine.Models/SlotMachine.Models.csproj",
       "msbuildProject": "../SlotMachine.Models/SlotMachine.Models.csproj"
-    },
-    "SlotMachine.Services/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.Services/SlotMachine.Services.csproj",
-      "msbuildProject": "../SlotMachine.Services/SlotMachine.Services.csproj"
-    },
-    "SlotMachine.Services.Implementation/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.Services.Implementation/SlotMachine.Services.Implementation.csproj",
-      "msbuildProject": "../SlotMachine.Services.Implementation/SlotMachine.Services.Implementation.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Autofac >= 5.2.0",
       "NETStandard.Library >= 2.0.1",
+      "SlotMachine.BusinessServices >= 1.0.0",
+      "SlotMachine.BusinessServices.Implementation >= 1.0.0",
       "SlotMachine.ConsoleServices >= 1.0.0",
-      "SlotMachine.ConsoleServices.Implementation >= 1.0.0",
-      "SlotMachine.Services >= 1.0.0",
-      "SlotMachine.Services.Implementation >= 1.0.0"
+      "SlotMachine.ConsoleServices.Implementation >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -451,11 +451,11 @@
             "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj": {
               "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj"
             },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.Services.Implementation.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.Services.Implementation.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services.Implementation\\SlotMachine.BusinessServices.Implementation.csproj"
             },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj"
             }
           }
         }

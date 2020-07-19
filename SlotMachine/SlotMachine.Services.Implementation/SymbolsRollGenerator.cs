@@ -1,9 +1,7 @@
 ﻿using SlotMachine.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace SlotMachine.Services.Implementation
+namespace SlotMachine.BusinessServices.Implementation
 {
     public class SymbolsRollGenerator : ISymbolsRollGenerator
     {

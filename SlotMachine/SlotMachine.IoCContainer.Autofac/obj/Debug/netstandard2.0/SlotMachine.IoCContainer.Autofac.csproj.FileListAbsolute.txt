@@ -18,10 +18,6 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Deb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Models.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Services.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Services.Implementation.dll
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Services.Implementation.pdb
-D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Services.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.csprojAssemblyReference.cache
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\obj\Debug\netstandard2.0\SlotMachine.IoCContainer.Autofac.csproj.CoreCompileInputs.cache
@@ -34,3 +30,7 @@ D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Deb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.dll
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.Implementation.pdb
 D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.ConsoleServices.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.Implementation.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.Implementation.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.IoCContainer.Autofac\bin\Debug\netstandard2.0\SlotMachine.BusinessServices.pdb

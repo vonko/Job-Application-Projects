@@ -5,17 +5,17 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.ConsoleInterface", "SlotMachine.Console\SlotMachine.ConsoleInterface.csproj", "{098E0BEF-44A0-4FC7-8BB6-F4AFAF1F689B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.Services", "SlotMachine.Services\SlotMachine.Services.csproj", "{9966F518-ED54-4665-84F2-E2A39E242644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.BusinessServices", "SlotMachine.Services\SlotMachine.BusinessServices.csproj", "{9966F518-ED54-4665-84F2-E2A39E242644}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.Services.Implementation", "SlotMachine.Services.Implementation\SlotMachine.Services.Implementation.csproj", "{23FDA117-85E9-4489-A706-26D4C06714FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.BusinessServices.Implementation", "SlotMachine.Services.Implementation\SlotMachine.BusinessServices.Implementation.csproj", "{23FDA117-85E9-4489-A706-26D4C06714FB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.IoCContainer.Autofac", "SlotMachine.IoCContainer.Autofac\SlotMachine.IoCContainer.Autofac.csproj", "{4592CDA4-35DC-4111-8FBE-3605ABDEC9C7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.Models", "SlotMachine.Models\SlotMachine.Models.csproj", "{44F420FC-9CDF-4CF7-8F4A-6BD159A43F88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotMachine.ConsoleServices", "SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj", "{DD3BE14E-307E-4248-A8FA-74EDACF42B61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.ConsoleServices", "SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj", "{DD3BE14E-307E-4248-A8FA-74EDACF42B61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotMachine.ConsoleServices.Implementation", "SlotMachine.ConsoleServices.Implementation\SlotMachine.ConsoleServices.Implementation.csproj", "{E5288F74-FD01-42DA-AB46-71E0615980EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlotMachine.ConsoleServices.Implementation", "SlotMachine.ConsoleServices.Implementation\SlotMachine.ConsoleServices.Implementation.csproj", "{E5288F74-FD01-42DA-AB46-71E0615980EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,10 +11,10 @@
         "dependencies": {
           "Autofac": "5.2.0",
           "NETStandard.Library": "2.0.1",
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.BusinessServices.Implementation": "1.0.0",
           "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.ConsoleServices.Implementation": "1.0.0",
-          "SlotMachine.Services": "1.0.0",
-          "SlotMachine.Services.Implementation": "1.0.0"
+          "SlotMachine.ConsoleServices.Implementation": "1.0.0"
         },
         "runtime": {
           "SlotMachine.IoCContainer.Autofac.dll": {}
@@ -55,6 +55,22 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "SlotMachine.BusinessServices/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.BusinessServices.dll": {}
+        }
+      },
+      "SlotMachine.BusinessServices.Implementation/1.0.0": {
+        "dependencies": {
+          "SlotMachine.BusinessServices": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.BusinessServices.Implementation.dll": {}
+        }
+      },
       "SlotMachine.ConsoleServices/1.0.0": {
         "dependencies": {
           "SlotMachine.Models": "1.0.0"
@@ -65,8 +81,8 @@
       },
       "SlotMachine.ConsoleServices.Implementation/1.0.0": {
         "dependencies": {
-          "SlotMachine.ConsoleServices": "1.0.0",
-          "SlotMachine.Services": "1.0.0"
+          "SlotMachine.BusinessServices": "1.0.0",
+          "SlotMachine.ConsoleServices": "1.0.0"
         },
         "runtime": {
           "SlotMachine.ConsoleServices.Implementation.dll": {}
@@ -75,22 +91,6 @@
       "SlotMachine.Models/1.0.0": {
         "runtime": {
           "SlotMachine.Models.dll": {}
-        }
-      },
-      "SlotMachine.Services/1.0.0": {
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "runtime": {
-          "SlotMachine.Services.dll": {}
-        }
-      },
-      "SlotMachine.Services.Implementation/1.0.0": {
-        "dependencies": {
-          "SlotMachine.Services": "1.0.0"
-        },
-        "runtime": {
-          "SlotMachine.Services.Implementation.dll": {}
         }
       }
     }
@@ -143,6 +143,16 @@
       "path": "system.threading.tasks.extensions/4.5.2",
       "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
     },
+    "SlotMachine.BusinessServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.BusinessServices.Implementation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SlotMachine.ConsoleServices/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -154,16 +164,6 @@
       "sha512": ""
     },
     "SlotMachine.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SlotMachine.Services/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SlotMachine.Services.Implementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

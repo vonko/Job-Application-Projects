@@ -199,9 +199,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj",
-      "projectName": "SlotMachine.Services",
-      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj",
+      "projectUniqueName": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj",
+      "projectName": "SlotMachine.BusinessServices",
+      "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj",
       "packagesPath": "C:\\Users\\Vonko\\.nuget\\packages\\",
       "outputPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\obj\\",
       "projectStyle": "PackageReference",

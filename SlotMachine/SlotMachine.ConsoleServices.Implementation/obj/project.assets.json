@@ -26,6 +26,19 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "SlotMachine.BusinessServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SlotMachine.BusinessServices.dll": {}
+        }
+      },
       "SlotMachine.ConsoleServices/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -47,19 +60,6 @@
         },
         "runtime": {
           "bin/placeholder/SlotMachine.Models.dll": {}
-        }
-      },
-      "SlotMachine.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "SlotMachine.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SlotMachine.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SlotMachine.Services.dll": {}
         }
       }
     }
@@ -206,6 +206,11 @@
         "netstandard.library.nuspec"
       ]
     },
+    "SlotMachine.BusinessServices/1.0.0": {
+      "type": "project",
+      "path": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj",
+      "msbuildProject": "../SlotMachine.Services/SlotMachine.BusinessServices.csproj"
+    },
     "SlotMachine.ConsoleServices/1.0.0": {
       "type": "project",
       "path": "../SlotMachine.ConsoleServices/SlotMachine.ConsoleServices.csproj",
@@ -215,18 +220,13 @@
       "type": "project",
       "path": "../SlotMachine.Models/SlotMachine.Models.csproj",
       "msbuildProject": "../SlotMachine.Models/SlotMachine.Models.csproj"
-    },
-    "SlotMachine.Services/1.0.0": {
-      "type": "project",
-      "path": "../SlotMachine.Services/SlotMachine.Services.csproj",
-      "msbuildProject": "../SlotMachine.Services/SlotMachine.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.1",
-      "SlotMachine.ConsoleServices >= 1.0.0",
-      "SlotMachine.Services >= 1.0.0"
+      "SlotMachine.BusinessServices >= 1.0.0",
+      "SlotMachine.ConsoleServices >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -262,8 +262,8 @@
             "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj": {
               "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.ConsoleServices\\SlotMachine.ConsoleServices.csproj"
             },
-            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj": {
-              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.Services.csproj"
+            "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj": {
+              "projectPath": "D:\\Job-Application-Projects\\SlotMachine\\SlotMachine.Services\\SlotMachine.BusinessServices.csproj"
             }
           }
         }

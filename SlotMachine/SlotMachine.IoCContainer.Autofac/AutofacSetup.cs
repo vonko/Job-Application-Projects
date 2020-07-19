@@ -1,8 +1,8 @@
 ﻿using Autofac;
+using SlotMachine.BusinessServices;
+using SlotMachine.BusinessServices.Implementation;
 using SlotMachine.ConsoleServices;
 using SlotMachine.ConsoleServices.Implementation;
-using SlotMachine.Services;
-using SlotMachine.Services.Implementation;
 
 namespace SlotMachine.IoCContainer.Autofac
 {

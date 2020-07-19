@@ -1,6 +1,6 @@
 ﻿using SlotMachine.Models;
 
-namespace SlotMachine.Services.Implementation
+namespace SlotMachine.BusinessServices.Implementation
 {
     public class GameEngine : IGameEngine
     {
