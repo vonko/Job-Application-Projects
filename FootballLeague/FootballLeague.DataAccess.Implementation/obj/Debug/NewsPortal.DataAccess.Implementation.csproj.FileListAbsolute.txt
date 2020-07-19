@@ -1,0 +1,11 @@
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.DataAccess.Implementation.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.DataAccess.Implementation.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.DataAccess.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.DataAccess.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\obj\Debug\NewsPortal.DataAccess.Implementation.csprojAssemblyReference.cache
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\obj\Debug\NewsPortal.DataAccess.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\obj\Debug\NewsPortal.DataAccess.Implementation.csproj.CopyComplete
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\obj\Debug\NewsPortal.DataAccess.Implementation.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\obj\Debug\NewsPortal.DataAccess.Implementation.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.Models.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.DataAccess.Implementation\bin\Debug\NewsPortal.Models.pdb

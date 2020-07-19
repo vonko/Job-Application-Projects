@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SlotMachine.ConsoleServices.Implementation\SlotMachine.ConsoleServices.Implementation.csproj" />
+    <ProjectReference Include="..\SlotMachine.ConsoleServices\SlotMachine.ConsoleServices.csproj" />
+    <ProjectReference Include="..\SlotMachine.Services.Implementation\SlotMachine.Services.Implementation.csproj" />
+    <ProjectReference Include="..\SlotMachine.Services\SlotMachine.Services.csproj" />
+  </ItemGroup>
+
+</Project>

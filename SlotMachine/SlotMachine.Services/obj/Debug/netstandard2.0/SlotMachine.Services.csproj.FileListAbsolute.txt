@@ -1,0 +1,24 @@
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.deps.json
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.dll
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.pdb
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csprojAssemblyReference.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csproj.CoreCompileInputs.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.AssemblyInfoInputs.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.AssemblyInfo.cs
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.dll
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.pdb
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Models.dll
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
+D:\Job Application Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csproj.CopyComplete
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.deps.json
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Services.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Models.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\bin\Debug\netstandard2.0\SlotMachine.Models.pdb
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csprojAssemblyReference.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csproj.CoreCompileInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.AssemblyInfoInputs.cache
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.AssemblyInfo.cs
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.csproj.CopyComplete
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.dll
+D:\Job-Application-Projects\SlotMachine\SlotMachine.Services\obj\Debug\netstandard2.0\SlotMachine.Services.pdb

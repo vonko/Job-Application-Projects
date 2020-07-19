@@ -1,0 +1,165 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "e517bf2c9e31ee345dd40c190627c64c77552adf"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "SlotMachine.ConsoleInterface/1.0.0": {
+        "dependencies": {
+          "SlotMachine.ConsoleServices": "1.0.0",
+          "SlotMachine.IoCContainer.Autofac": "1.0.0",
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.ConsoleInterface.dll": {}
+        }
+      },
+      "Autofac/5.2.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
+      "SlotMachine.ConsoleServices/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.ConsoleServices.dll": {}
+        }
+      },
+      "SlotMachine.ConsoleServices.Implementation/1.0.0": {
+        "dependencies": {
+          "SlotMachine.ConsoleServices": "1.0.0",
+          "SlotMachine.Services": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.ConsoleServices.Implementation.dll": {}
+        }
+      },
+      "SlotMachine.IoCContainer.Autofac/1.0.0": {
+        "dependencies": {
+          "Autofac": "5.2.0",
+          "SlotMachine.ConsoleServices": "1.0.0",
+          "SlotMachine.ConsoleServices.Implementation": "1.0.0",
+          "SlotMachine.Services": "1.0.0",
+          "SlotMachine.Services.Implementation": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.IoCContainer.Autofac.dll": {}
+        }
+      },
+      "SlotMachine.Models/1.0.0": {
+        "runtime": {
+          "SlotMachine.Models.dll": {}
+        }
+      },
+      "SlotMachine.Services/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Models": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.Services.dll": {}
+        }
+      },
+      "SlotMachine.Services.Implementation/1.0.0": {
+        "dependencies": {
+          "SlotMachine.Services": "1.0.0"
+        },
+        "runtime": {
+          "SlotMachine.Services.Implementation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SlotMachine.ConsoleInterface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Autofac/5.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nha9tg+hCzy/r2xrV64vpZFTwQAhWAsAMfTOiVPcKB2sQG3wvlv9mfPoVA6N6zGnEj1LgiLlgy00JAvC/DcU7w==",
+      "path": "autofac/5.2.0",
+      "hashPath": "autofac.5.2.0.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QnfOJlIz5evxU3Dn1Cz4V0wfznFaiS6tvroTYTbbw2uk14tAkOVSFyk/hCHy64S8/ck0PeQqLV4GuP9bANByPQ==",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5HCu8V3QB+gouMZmGrA666weZ0UQRt+OTD16rSE3Hyhu4Qhlvxkf4nTPI0GLy52s0rxgi7C8t2ayFAzw7UK1og==",
+      "path": "system.threading.tasks.extensions/4.5.2",
+      "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    },
+    "SlotMachine.ConsoleServices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.ConsoleServices.Implementation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.IoCContainer.Autofac/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotMachine.Services.Implementation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

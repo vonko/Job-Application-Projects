@@ -1,0 +1,34 @@
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Services.Implementation.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Services.Implementation.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\AutoMapper.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.DataAccess.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.DataAcess.DbModels.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Models.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Services.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.DataAccess.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.DataAcess.DbModels.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Models.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\LiveResults.Services.pdb
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\bin\Debug\AutoMapper.xml
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csprojAssemblyReference.cache
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CoreCompileInputs.cache
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CopyComplete
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\obj\Debug\LiveResults.Services.Implementation.dll
+C:\Users\Vonko\Desktop\LiveResults\LiveResults.Services.Implementation\obj\Debug\LiveResults.Services.Implementation.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\AutoMapper.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\LiveResults.DataAccess.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\LiveResults.DataAccess.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\AutoMapper.xml
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csprojAssemblyReference.cache
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CoreCompileInputs.cache
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.csproj.CopyComplete
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.Implementation.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.Implementation.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Models.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.DbModels.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Models.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.Services.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.DbModels.pdb
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.dll
+D:\Job Application Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.pdb

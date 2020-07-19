@@ -1,0 +1,5 @@
+D:\Job Application Projects\SlotMachine\SlotMachine.Console\bin\Debug\netcoreapp2.0\SlotMachine.Services.dll
+D:\Job Application Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.Console.csprojAssemblyReference.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.Console.csproj.CoreCompileInputs.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.Console.AssemblyInfoInputs.cache
+D:\Job Application Projects\SlotMachine\SlotMachine.Console\obj\Debug\netcoreapp2.0\SlotMachine.Console.AssemblyInfo.cs
