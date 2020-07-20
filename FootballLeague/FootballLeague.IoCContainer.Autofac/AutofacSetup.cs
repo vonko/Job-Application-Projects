@@ -4,6 +4,8 @@ using FootballLeague.DataAccess;
 using FootballLeague.DataAccess.Implementation;
 using FootballLeague.Services;
 using FootballLeague.Services.Implementation;
+using FootballLeague.Services.Implementation.Utils;
+using FootballLeague.Services.Utils;
 using System.Web.Mvc;
 
 namespace FootballLeagueAutofacSetup
@@ -31,6 +33,7 @@ namespace FootballLeagueAutofacSetup
             builder.RegisterType<PlayedGamesService>().As<IPlayedGamesService>().InstancePerLifetimeScope();
             builder.RegisterType<RankingsService>().As<IRankingsService>().InstancePerLifetimeScope();
             builder.RegisterType<DataSourceService>().As<IDataSourceService>().InstancePerLifetimeScope();
+            builder.RegisterType<DateTimeProvider>().As<IDateTimeProvider>().InstancePerLifetimeScope();
 
             //builder.RegisterType<IMapper>().As<Mapper>().InstancePerLifetimeScope();
 

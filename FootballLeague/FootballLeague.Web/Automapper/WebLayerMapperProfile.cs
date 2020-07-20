@@ -25,6 +25,10 @@ namespace FootballLeague.Web.Automapper
 
             CreateMap<AddPlayedGameDto, AddPlayedGameViewModel>();
 
+            CreateMap<UpdatePlayedGameDto, UpdatePlayedGameViewModel>();
+
+            CreateMap<PlayedGameDto, UpdatePlayedGameViewModel>();
+
             CreateMap<PlayedGameDto, PlayedGameViewModel>();
 
             CreateMap<List<PlayedGameDto>, List<PlayedGameViewModel>>();

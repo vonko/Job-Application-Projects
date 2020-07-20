@@ -23,6 +23,8 @@ namespace FootballLeague.Services.Automapper
 
             CreateMap<AddPlayedGameDto, PlayedGame>();
 
+            CreateMap<UpdatePlayedGameDto, PlayedGame>();
+
             CreateMap<PlayedGameDto, PlayedGame>();
 
             CreateMap<FootballTeamDto, DataSourceDto>();

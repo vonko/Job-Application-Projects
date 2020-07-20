@@ -1,4 +1,4 @@
-﻿@model FootballLeague.Web.Models.PlayedGames.AddPlayedGameViewModel
+﻿@model FootballLeague.Web.Models.PlayedGames.UpdatePlayedGameViewModel
 @{
     ViewBag.Title = "Played Game";
 }
@@ -10,6 +10,7 @@
     @Html.AntiForgeryToken()
     <h4>Update a Played Game</h4>
     <hr />
+    @Html.HiddenFor(m => m.ID)
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="row">
         <div class="col-md-3">

@@ -5,7 +5,6 @@ using FootballLeague.Models.PlayedGame;
 using FootballLeague.Services;
 using FootballLeague.Web.Models.DataSources;
 using FootballLeague.Web.Models.PlayedGames;
-using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -84,40 +83,48 @@ namespace FootballLeague.Web.Controllers
             return RedirectToAction("PlayedGames", "PlayedGame");
         }
 
-        //[HttpGet]
-        //public ActionResult UpdateFootballTeam(int teamId)
-        //{
-        //    Result<FootballTeamDto> result = this.service.GetTeam(teamId);
-        //    if (result.IsError)
-        //    {
-        //        ModelState.AddModelError("", $"Error: { result.Message }");
+        [HttpGet]
+        public ActionResult UpdatePlayedGame(int gameId)
+        {
+            Result<PlayedGameDto> result = this.service.GetGame(gameId);
+            if (result.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { result.Message }");
 
-        //        return View();
-        //    }
+                return View();
+            }
 
-        //    UpdateFootballTeamViewModel viewModel = Mapper.Map<FootballTeamDto, UpdateFootballTeamViewModel>(result.Data);
+            UpdatePlayedGameViewModel viewModel = Mapper.Map<PlayedGameDto, UpdatePlayedGameViewModel>(result.Data);
+            var dataSourcesResult = this.dataSourceService.GetPlayedGameDataSources();
+            if (dataSourcesResult.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { dataSourcesResult.Message }");
 
-        //    return View(viewModel);
-        //}
+                return View(viewModel);
+            }
+            viewModel.DataSources = this.MapPlayedGamesDataSources(dataSourcesResult.Data);
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult UpdatePlayedGame(UpdatePlayedGameViewModel viewModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(viewModel);
-        //    }
+            return View(viewModel);
+        }
 
-        //    UpdatePlayedGameDto teamToUpdate = Mapper.Map<UpdatePlayedGameViewModel, UpdateFootballTeamDto>(viewModel);
-        //    Result result = this.service.UpdateGame(teamToUpdate);
-        //    if (result.IsError)
-        //    {
-        //        ModelState.AddModelError("", $"Error: { result.Message }");
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UpdatePlayedGame(UpdatePlayedGameViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
 
-        //    return RedirectToAction("PlayedGames", "PlayedGame");
-        //}
+            UpdatePlayedGameDto gameToUpdate = Mapper.Map<UpdatePlayedGameViewModel, UpdatePlayedGameDto>(viewModel);
+            Result result = this.service.UpdateGame(gameToUpdate);
+            if (result.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { result.Message }");
+            }
+
+            return RedirectToAction("PlayedGames", "PlayedGame");
+        }
 
         [HttpGet]
         public ActionResult DeletePlayedGame(int gameId)

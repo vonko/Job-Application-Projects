@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace FootballLeague.Web.Models.PlayedGames
+﻿namespace FootballLeague.Web.Models.PlayedGames
 {
-    public class UpdatePlayedGameViewModel
+    public class UpdatePlayedGameViewModel : AddPlayedGameViewModel
     {
+        public int ID { get; set; }
     }
 }

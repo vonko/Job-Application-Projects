@@ -43,6 +43,7 @@
     <Compile Include="DataSources\DataSourceDto.cs" />
     <Compile Include="DataSources\PlayedGameDataSourcesDto.cs" />
     <Compile Include="FootballTeam\AddFootballTeamDto.cs" />
+    <Compile Include="PlayedGame\UpdatePlayedGameDto.cs" />
     <Compile Include="Rankings\RankingDto.cs" />
     <Compile Include="PlayedGame\AddPlayedGameDto.cs" />
     <Compile Include="DisplayStatus.cs" />

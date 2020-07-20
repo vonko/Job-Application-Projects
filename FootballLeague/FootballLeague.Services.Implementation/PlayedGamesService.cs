@@ -4,6 +4,7 @@ using FootballLeague.DataAccess.DbModels;
 using FootballLeague.Models;
 using FootballLeague.Models.DataSources;
 using FootballLeague.Models.PlayedGame;
+using FootballLeague.Services.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,15 @@ namespace FootballLeague.Services.Implementation
 
         private readonly IDALContext dalCotext;
         private readonly IDataSourceService dataSourceService;
+        private readonly IDateTimeProvider dateTimeProvider;
 
         public PlayedGamesService(IDALContext dalCotext,
-                                  IDataSourceService dataSourceService)
+                                  IDataSourceService dataSourceService,
+                                  IDateTimeProvider dateTimeProvider)
         {
             this.dalCotext = dalCotext;
             this.dataSourceService = dataSourceService;
+            this.dateTimeProvider = dateTimeProvider;
         }
 
         public Result<PlayedGameDto> GetGame(int gameId)
@@ -104,10 +108,11 @@ namespace FootballLeague.Services.Implementation
             {
                 using (var scope = new TransactionScope(TransactionScopeOption.Required))
                 {
-                    gameDto.DatePlayed = DateTime.Now;
+                    gameDto.DatePlayed = this.dateTimeProvider.GetCurrentDateTime();
                     PlayedGameDto newGameDto = this.dalCotext.PlayedGamesRepository.AddGame(gameDto);
 
-                    Result updatePointsResult = this.UpdateTeamsPoints(newGameDto, gameDeletion: false);
+                    UpdatePlayedGameDto addedGame = Mapper.Map<PlayedGameDto, UpdatePlayedGameDto>(newGameDto);
+                    Result updatePointsResult = this.UpdateTeamsPoints(addedGame, gameDeletion: false);
                     if (updatePointsResult.IsError)
                     {
                         result.SetError(updatePointsResult.Message);
@@ -116,8 +121,6 @@ namespace FootballLeague.Services.Implementation
                     }
 
                     scope.Complete();
-
-                    result.SetSuccess("Game added successfully.");
 
                     return result.SetData(newGameDto);
                 }
@@ -130,7 +133,7 @@ namespace FootballLeague.Services.Implementation
             }
         }
 
-        public Result UpdateGame(PlayedGameDto newGameDto)
+        public Result UpdateGame(UpdatePlayedGameDto newGameDto)
         {
             Result result = new Result();
 
@@ -144,7 +147,7 @@ namespace FootballLeague.Services.Implementation
 
                 using (var scope = new TransactionScope(TransactionScopeOption.Required))
                 {
-                    PlayedGameDto oldGameDto = Mapper.Map<PlayedGame, PlayedGameDto>(oldPlayedGame);
+                    UpdatePlayedGameDto oldGameDto = Mapper.Map<PlayedGame, UpdatePlayedGameDto>(oldPlayedGame);
                     Result updatePointsResult = this.UpdateTeamsPoints(oldGameDto, gameDeletion: true);
                     if (updatePointsResult.IsError)
                     {
@@ -154,7 +157,6 @@ namespace FootballLeague.Services.Implementation
                     }
 
                     oldPlayedGame.Result = newGameDto.Result;
-
                     this.dalCotext.PlayedGamesRepository.Update(oldPlayedGame);
 
                     updatePointsResult = this.UpdateTeamsPoints(newGameDto, gameDeletion: false);
@@ -192,7 +194,8 @@ namespace FootballLeague.Services.Implementation
 
                     this.dalCotext.PlayedGamesRepository.Delete(gameDto.ID);
 
-                    Result updateTeamPointsResult = this.UpdateTeamsPoints(gameDto, gameDeletion: true);
+                    UpdatePlayedGameDto deletedGame = Mapper.Map<PlayedGameDto, UpdatePlayedGameDto>(gameDto);
+                    Result updateTeamPointsResult = this.UpdateTeamsPoints(deletedGame, gameDeletion: true);
                     if (updateTeamPointsResult.IsError)
                     {
                         return updateTeamPointsResult;
@@ -209,7 +212,7 @@ namespace FootballLeague.Services.Implementation
             }
         }
 
-        private Result UpdateTeamsPoints(PlayedGameDto game, bool gameDeletion)
+        private Result UpdateTeamsPoints(UpdatePlayedGameDto game, bool gameDeletion)
         {
             Result result = this.UpdateHomeTeamWinOrDraw(game, gameDeletion);
 
@@ -218,7 +221,7 @@ namespace FootballLeague.Services.Implementation
             return result;
         }
 
-        private Result UpdateHomeTeamWinOrDraw(PlayedGameDto game, bool gameDeletion)
+        private Result UpdateHomeTeamWinOrDraw(UpdatePlayedGameDto game, bool gameDeletion)
         {
             Result result = new Result();
 
@@ -231,28 +234,7 @@ namespace FootballLeague.Services.Implementation
                     return result.SetError($"There is no team with id #{ game.HomeTeamId }!");
                 }
 
-                if (game.Result == GameResult.Won)
-                {
-                    if (!gameDeletion)
-                    {
-                        homeTeam.Points += WINNING_POINTS;
-                    }
-                    else
-                    {
-                        homeTeam.Points -= WINNING_POINTS;
-                    }
-                }
-                else if (game.Result == GameResult.Draw)
-                {
-                    if (!gameDeletion)
-                    {
-                        homeTeam.Points += DRAW_POINTS;
-                    }
-                    else
-                    {
-                        homeTeam.Points -= DRAW_POINTS;
-                    }
-                }
+                homeTeam = this.UpdateHomeTeamPoints(game, gameDeletion, homeTeam);
 
                 this.dalCotext.FootballTeamsRepository.Update(homeTeam);
             }
@@ -260,7 +242,7 @@ namespace FootballLeague.Services.Implementation
             return result.SetSuccess("Team points updated.");
         }
 
-        private Result UpdateAwayTeamWinOrDraw(PlayedGameDto game, bool gameDeletion)
+        private Result UpdateAwayTeamWinOrDraw(UpdatePlayedGameDto game, bool gameDeletion)
         {
             Result result = new Result();
 
@@ -273,33 +255,68 @@ namespace FootballLeague.Services.Implementation
                     return result.SetError($"There is no team with id #{ game.AwayTeamId }!");
                 }
 
-                if (game.Result == GameResult.Lost)
-                {
-                    if (!gameDeletion)
-                    {
-                        awayTeam.Points += WINNING_POINTS;
-                    }
-                    else
-                    {
-                        awayTeam.Points -= WINNING_POINTS;
-                    }
-                }
-                else if (game.Result == GameResult.Draw)
-                {
-                    if (!gameDeletion)
-                    {
-                        awayTeam.Points += DRAW_POINTS;
-                    }
-                    else
-                    {
-                        awayTeam.Points -= DRAW_POINTS;
-                    }
-                }
+                awayTeam = this.UpdateAwayTeamPoints(game, gameDeletion, awayTeam);
 
                 this.dalCotext.FootballTeamsRepository.Update(awayTeam);
             }
 
             return result.SetSuccess("Team points updated.");
+        }
+
+        private FootballTeam UpdateHomeTeamPoints(UpdatePlayedGameDto game, bool gameDeletion, FootballTeam homeTeam)
+        {
+            if (game.Result == GameResult.Won)
+            {
+                if (!gameDeletion)
+                {
+                    homeTeam.Points += WINNING_POINTS;
+                }
+                else
+                {
+                    homeTeam.Points -= WINNING_POINTS;
+                }
+            }
+            else if (game.Result == GameResult.Draw)
+            {
+                if (!gameDeletion)
+                {
+                    homeTeam.Points += DRAW_POINTS;
+                }
+                else
+                {
+                    homeTeam.Points -= DRAW_POINTS;
+                }
+            }
+
+            return homeTeam;
+        }
+
+        private FootballTeam UpdateAwayTeamPoints(UpdatePlayedGameDto game, bool gameDeletion, FootballTeam awayTeam)
+        {
+            if (game.Result == GameResult.Lost)
+            {
+                if (!gameDeletion)
+                {
+                    awayTeam.Points += WINNING_POINTS;
+                }
+                else
+                {
+                    awayTeam.Points -= WINNING_POINTS;
+                }
+            }
+            else if (game.Result == GameResult.Draw)
+            {
+                if (!gameDeletion)
+                {
+                    awayTeam.Points += DRAW_POINTS;
+                }
+                else
+                {
+                    awayTeam.Points -= DRAW_POINTS;
+                }
+            }
+
+            return awayTeam;
         }
 
         private PlayedGameDto FillGameAdditionalData(PlayedGameDataSourcesDto dataSources, PlayedGameDto gameDto)

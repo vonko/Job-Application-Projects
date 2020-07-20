@@ -4,8 +4,14 @@
 @Html.ValidationSummary()
 
 <div class="row">
-    <div class="col-sm pb-15 pl-25">
+    <div class="col-md-2 pl-25 pb-15 ">
+        @Html.ActionLink("Back To Home", "Index", "Home")
+    </div>
+    <div class="col-m3-2 pb-15 ">
         @Html.ActionLink("Add Football Team", "AddFootballTeam", "FootballTeam")
+    </div>
+    <div class="col-md-2 pb-15">
+        @Html.ActionLink("Rankings", "Rankings", "Ranking")
     </div>
 </div>
 

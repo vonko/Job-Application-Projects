@@ -12,7 +12,7 @@ namespace FootballLeague.Services
 
         Result<PlayedGameDto> AddPlayedGame(AddPlayedGameDto teamDto);
 
-        Result UpdateGame(PlayedGameDto teamDto);
+        Result UpdateGame(UpdatePlayedGameDto teamDto);
 
         Result DeleteGame(int gameId);
     }
