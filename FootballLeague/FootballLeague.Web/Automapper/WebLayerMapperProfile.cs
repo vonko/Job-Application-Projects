@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using FootballLeague.Models;
+using FootballLeague.Models.DataSources;
 using FootballLeague.Models.FootballTeam;
 using FootballLeague.Models.PlayedGame;
 using FootballLeague.Models.Rankings;
+using FootballLeague.Web.Models.DataSources;
 using FootballLeague.Web.Models.FootballTeams;
 using FootballLeague.Web.Models.PlayedGames;
 using FootballLeague.Web.Models.Rankings;

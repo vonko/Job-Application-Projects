@@ -1,14 +1,13 @@
-﻿using FootballLeague.Models.FootballTeam;
-using System;
-
-namespace FootballLeague.Models.PlayedGame
+﻿namespace FootballLeague.Models.PlayedGame
 {
     public class PlayedGameDto : AddPlayedGameDto
     {
         public int ID { get; set; }
 
-        public FootballTeamDto HomeTeam { get; set; }
+        public string HomeTeamName { get; set; }
 
-        public FootballTeamDto AwayTeam { get; set; }
+        public string AwayTeamName { get; set; }
+
+        public string ResultName { get; set; }
     }
 }

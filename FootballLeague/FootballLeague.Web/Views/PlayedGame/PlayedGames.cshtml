@@ -4,7 +4,7 @@
 @Html.ValidationSummary()
 
 <div class="row">
-    <div class="col-sm">
+    <div class="col-sm pl-25">
         @Html.ActionLink("Add Played Game", "AddPlayedGame", "PlayedGame")
     </div>
 </div>
@@ -19,19 +19,27 @@
     <div class="col-md-3">
         RESULT
     </div>
+    <div class="col-md-2">
+
+    </div>
 </div>
 
 @foreach (var game in Model.PlayedGames)
 {
     <div class="row">
         <div class="col-md-3">
-            @game.HomeTeam.Name
+            @game.HomeTeamName
         </div>
         <div class="col-md-3">
-            @game.AwayTeam.Name
+            @game.AwayTeamName
         </div>
         <div class="col-md-3">
-            @game.Result
+            @game.ResultName
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Delete",
+                             "DeletePlayedGame",
+                              new { gameId = game.ID })
         </div>
     </div>
 }

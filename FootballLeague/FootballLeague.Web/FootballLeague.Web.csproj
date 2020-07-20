@@ -194,13 +194,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataSources\PlayedGameDataSourcesViewModel.cs" />
     <Compile Include="Models\FootballTeams\AddFootballTeamViewModel.cs" />
     <Compile Include="Models\PlayedGames\AddPlayedGameViewModel.cs" />
     <Compile Include="Models\FootballTeams\FootballTeamsDataContextViewModel.cs" />
     <Compile Include="Models\FootballTeams\FootballTeamViewModel.cs" />
-    <Compile Include="Models\DataSourceViewModel.cs" />
+    <Compile Include="Models\DataSources\DataSourceViewModel.cs" />
     <Compile Include="Models\PlayedGames\PlayedGamesDataContextViewModel.cs" />
     <Compile Include="Models\PlayedGames\PlayedGameViewModel.cs" />
+    <Compile Include="Models\PlayedGames\UpdatePlayedGameViewModel.cs" />
     <Compile Include="Models\Rankings\RankingViewModel.cs" />
     <Compile Include="Models\Rankings\RankingsDataContextViewModel.cs" />
     <Compile Include="Models\FootballTeams\UpdateFootballTeamViewModel.cs" />

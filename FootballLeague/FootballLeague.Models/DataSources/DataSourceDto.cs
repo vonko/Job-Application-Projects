@@ -1,6 +1,6 @@
-﻿namespace FootballLeague.Web.Models.PlayedGames
+﻿namespace FootballLeague.Models.DataSources
 {
-    public class DataSourceViewModel
+    public class DataSourceDto
     {
         public int ID { get; set; }
 

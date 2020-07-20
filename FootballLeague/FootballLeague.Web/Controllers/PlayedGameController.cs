@@ -1,8 +1,11 @@
 ﻿using AutoMapper;
 using FootballLeague.Models;
+using FootballLeague.Models.DataSources;
 using FootballLeague.Models.PlayedGame;
 using FootballLeague.Services;
+using FootballLeague.Web.Models.DataSources;
 using FootballLeague.Web.Models.PlayedGames;
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -50,10 +53,14 @@ namespace FootballLeague.Web.Controllers
                 return View(viewModel);
             }
 
-            viewModel.Teams = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(teamsDataSourceResult.Data);
+            var dataSourcesResult = this.dataSourceService.GetPlayedGameDataSources();
+            if (dataSourcesResult.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { dataSourcesResult.Message }");
 
-            var resultsDataSource = this.dataSourceService.GetResultsDataSource();
-            viewModel.Results = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(resultsDataSource);
+                return View(viewModel);
+            }
+            viewModel.DataSources = this.MapPlayedGamesDataSources(dataSourcesResult.Data);
 
             return View(viewModel);
         }
@@ -75,6 +82,78 @@ namespace FootballLeague.Web.Controllers
             }
 
             return RedirectToAction("PlayedGames", "PlayedGame");
+        }
+
+        //[HttpGet]
+        //public ActionResult UpdateFootballTeam(int teamId)
+        //{
+        //    Result<FootballTeamDto> result = this.service.GetTeam(teamId);
+        //    if (result.IsError)
+        //    {
+        //        ModelState.AddModelError("", $"Error: { result.Message }");
+
+        //        return View();
+        //    }
+
+        //    UpdateFootballTeamViewModel viewModel = Mapper.Map<FootballTeamDto, UpdateFootballTeamViewModel>(result.Data);
+
+        //    return View(viewModel);
+        //}
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult UpdatePlayedGame(UpdatePlayedGameViewModel viewModel)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(viewModel);
+        //    }
+
+        //    UpdatePlayedGameDto teamToUpdate = Mapper.Map<UpdatePlayedGameViewModel, UpdateFootballTeamDto>(viewModel);
+        //    Result result = this.service.UpdateGame(teamToUpdate);
+        //    if (result.IsError)
+        //    {
+        //        ModelState.AddModelError("", $"Error: { result.Message }");
+        //    }
+
+        //    return RedirectToAction("PlayedGames", "PlayedGame");
+        //}
+
+        [HttpGet]
+        public ActionResult DeletePlayedGame(int gameId)
+        {
+            Result result = this.service.DeleteGame(gameId);
+            if (result.IsError)
+            {
+                ModelState.AddModelError("", $"Error: { result.Message }");
+            }
+
+            return RedirectToAction("PlayedGames", "PlayedGame");
+        }
+
+        private PlayedGameDataSourcesViewModel MapPlayedGamesDataSources(PlayedGameDataSourcesDto data)
+        {
+            PlayedGameDataSourcesViewModel dataSourceViewModel = new PlayedGameDataSourcesViewModel()
+            {
+                Teams = new Dictionary<int, DataSourceViewModel>(),
+                Results = new Dictionary<int, DataSourceViewModel>()
+            };
+
+            foreach (var teamItem in data.Teams)
+            {
+                DataSourceViewModel sourceViewModel = Mapper.Map<DataSourceDto, DataSourceViewModel>(teamItem.Value);
+
+                dataSourceViewModel.Teams.Add(teamItem.Key, sourceViewModel);
+            }
+
+            foreach (var resultItem in data.Results)
+            {
+                DataSourceViewModel sourceViewModel = Mapper.Map<DataSourceDto, DataSourceViewModel>(resultItem.Value);
+
+                dataSourceViewModel.Results.Add(resultItem.Key, sourceViewModel);
+            }
+
+            return dataSourceViewModel;
         }
     }
 }

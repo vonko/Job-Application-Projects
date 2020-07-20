@@ -1,13 +1,11 @@
 ﻿using FootballLeague.Models.PlayedGame;
-using System.Collections.Generic;
+using FootballLeague.Web.Models.DataSources;
 
 namespace FootballLeague.Web.Models.PlayedGames
 {
     public class AddPlayedGameViewModel
     {
-        public IList<DataSourceViewModel> Teams { get; set; } = new List<DataSourceViewModel>();
-
-        public IList<DataSourceViewModel> Results { get; set; } = new List<DataSourceViewModel>();
+        public PlayedGameDataSourcesViewModel DataSources { get; set; }
 
         public int HomeTeamId { get; set; }
 

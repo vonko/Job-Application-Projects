@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using FootballLeague.DataAccess;
 using FootballLeague.Models;
+using FootballLeague.Models.DataSources;
 using FootballLeague.Models.FootballTeam;
 using FootballLeague.Models.PlayedGame;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FootballLeague.Services.Implementation
 {
@@ -24,7 +26,7 @@ namespace FootballLeague.Services.Implementation
             try
             {
                 IList<FootballTeamDto> teamDtos = this.dalCotext.FootballTeamsRepository.AllMaterialed();
-                IList<DataSourceDto> dataSources = Mapper.Map<IList<FootballTeamDto>, IList<DataSourceDto>> (teamDtos);
+                IList<DataSourceDto> dataSources = Mapper.Map<IList<FootballTeamDto>, IList<DataSourceDto>>(teamDtos);
 
                 return result.SetData(dataSources);
             }
@@ -57,6 +59,37 @@ namespace FootballLeague.Services.Implementation
             }
 
             return dataSource;
+        }
+
+        public Result<PlayedGameDataSourcesDto> GetPlayedGameDataSources()
+        {
+            Result<PlayedGameDataSourcesDto> result = new Result<PlayedGameDataSourcesDto>();
+
+            try
+            {
+                var resultsDataSourceList = this.GetResultsDataSource();
+                var teamsDataSourceResult = this.GetFootballTeamsDataSource();
+                if (teamsDataSourceResult.IsError)
+                {
+                    result.SetError(teamsDataSourceResult.Message);
+
+                    return result;
+                }
+
+                PlayedGameDataSourcesDto dataSourceDto = new PlayedGameDataSourcesDto
+                {
+                    Teams = teamsDataSourceResult.Data.ToDictionary(t => t.ID, t => t ),
+                    Results = resultsDataSourceList.ToDictionary(r => r.ID, r => r)
+                };
+
+                return result.SetData(dataSourceDto);
+            }
+            catch(Exception ex)
+            {
+                result.SetError(ex.Message);
+
+                return result;
+            }
         }
     }
 }

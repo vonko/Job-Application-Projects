@@ -1,5 +1,4 @@
 ﻿using FootballLeague.Models.PlayedGame;
-using FootballLeague.Web.Models.FootballTeams;
 using System;
 
 namespace FootballLeague.Web.Models.PlayedGames
@@ -14,9 +13,11 @@ namespace FootballLeague.Web.Models.PlayedGames
 
         public GameResult Result { get; set; }
 
-        public FootballTeamViewModel HomeTeam { get; set; }
-        
-        public FootballTeamViewModel AwayTeam { get; set; }
+        public string ResultName { get; set; }
+
+        public string HomeTeamName { get; set; }
+
+        public string AwayTeamName { get; set; }
 
         public DateTime DatePlayed { get; set; }
     }

@@ -2,6 +2,7 @@
 using FootballLeague.DataAccess;
 using FootballLeague.DataAccess.DbModels;
 using FootballLeague.Models;
+using FootballLeague.Models.DataSources;
 using FootballLeague.Models.PlayedGame;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,13 @@ namespace FootballLeague.Services.Implementation
         private const int DRAW_POINTS = 1;
 
         private readonly IDALContext dalCotext;
+        private readonly IDataSourceService dataSourceService;
 
-        public PlayedGamesService(IDALContext dalCotext)
+        public PlayedGamesService(IDALContext dalCotext,
+                                  IDataSourceService dataSourceService)
         {
             this.dalCotext = dalCotext;
+            this.dataSourceService = dataSourceService;
         }
 
         public Result<PlayedGameDto> GetGame(int gameId)
@@ -35,6 +39,18 @@ namespace FootballLeague.Services.Implementation
 
                     return result;
                 }
+
+                var dataSourcesResult = this.dataSourceService.GetPlayedGameDataSources();
+                if (dataSourcesResult.IsError)
+                {
+                    result.SetError(dataSourcesResult.Message);
+
+                    return result;
+                }
+
+                var dataSources = dataSourcesResult.Data;
+
+                gameDto = this.FillGameAdditionalData(dataSources, gameDto);
 
                 return result.SetData(gameDto);
             }
@@ -54,6 +70,21 @@ namespace FootballLeague.Services.Implementation
             {
                 List<PlayedGame> games = this.dalCotext.PlayedGamesRepository.All().ToList();
                 IList<PlayedGameDto> gameDtos = Mapper.Map<List<PlayedGame>, List<PlayedGameDto>>(games);
+
+                var dataSourcesResult = this.dataSourceService.GetPlayedGameDataSources();
+                if (dataSourcesResult.IsError)
+                {
+                    result.SetError(dataSourcesResult.Message);
+
+                    return result;
+                }
+
+                var dataSources = dataSourcesResult.Data;
+
+                foreach(var gameDto in gameDtos)
+                {
+                    this.FillGameAdditionalData(dataSources, gameDto);
+                }
 
                 return result.SetData(gameDtos);
             }
@@ -269,6 +300,15 @@ namespace FootballLeague.Services.Implementation
             }
 
             return result.SetSuccess("Team points updated.");
+        }
+
+        private PlayedGameDto FillGameAdditionalData(PlayedGameDataSourcesDto dataSources, PlayedGameDto gameDto)
+        {
+            gameDto.HomeTeamName = dataSources.Teams[gameDto.HomeTeamId].Name;
+            gameDto.AwayTeamName = dataSources.Teams[gameDto.AwayTeamId].Name;
+            gameDto.ResultName = dataSources.Results[(int)gameDto.Result].Name;
+
+            return gameDto;
         }
     }
 }

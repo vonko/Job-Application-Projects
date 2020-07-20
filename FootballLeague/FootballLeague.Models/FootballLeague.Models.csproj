@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSourceDto.cs" />
+    <Compile Include="DataSources\DataSourceDto.cs" />
+    <Compile Include="DataSources\PlayedGameDataSourcesDto.cs" />
     <Compile Include="FootballTeam\AddFootballTeamDto.cs" />
     <Compile Include="Rankings\RankingDto.cs" />
     <Compile Include="PlayedGame\AddPlayedGameDto.cs" />
