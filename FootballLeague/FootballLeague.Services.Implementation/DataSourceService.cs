@@ -12,11 +12,13 @@ namespace FootballLeague.Services.Implementation
 {
     public class DataSourceService : IDataSourceService
     {
-        private readonly IDALContext dalCotext;
+        private const string DRAW_RESULT_TEXT = "X";
 
-        public DataSourceService(IDALContext dalCotext)
+        private readonly IFootballTeamsRepository teamsRepository;
+
+        public DataSourceService(IFootballTeamsRepository teamsRepository)
         {
-            this.dalCotext = dalCotext;
+            this.teamsRepository = teamsRepository;
         }
 
         public Result<IList<DataSourceDto>> GetFootballTeamsDataSource()
@@ -25,7 +27,7 @@ namespace FootballLeague.Services.Implementation
 
             try
             {
-                IList<FootballTeamDto> teamDtos = this.dalCotext.FootballTeamsRepository.AllMaterialed();
+                IList<FootballTeamDto> teamDtos = this.teamsRepository.AllMaterialed();
                 IList<DataSourceDto> dataSources = Mapper.Map<IList<FootballTeamDto>, IList<DataSourceDto>>(teamDtos);
 
                 return result.SetData(dataSources);
@@ -52,7 +54,7 @@ namespace FootballLeague.Services.Implementation
 
                 if (result == GameResult.Draw)
                 {
-                    newDataItem.Name = "X";
+                    newDataItem.Name = DRAW_RESULT_TEXT;
                 }
 
                 dataSource.Add(newDataItem);

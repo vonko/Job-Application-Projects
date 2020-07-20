@@ -11,11 +11,11 @@ namespace FootballLeague.Services.Implementation
 {
     public class RankingsService : IRankingsService
     {
-        private readonly IDALContext dalCotext;
+        private readonly IFootballTeamsRepository teamsRepository;
 
-        public RankingsService(IDALContext dalCotext)
+        public RankingsService(IFootballTeamsRepository teamsRepository)
         {
-            this.dalCotext = dalCotext;
+            this.teamsRepository = teamsRepository;
         }
 
         public Result<IList<RankingDto>> GetTeamRanikings()
@@ -24,7 +24,7 @@ namespace FootballLeague.Services.Implementation
 
             try
             {
-                List<FootballTeam> teams = this.dalCotext.FootballTeamsRepository
+                List<FootballTeam> teams = this.teamsRepository
                                            .All()
                                            .OrderByDescending(t => t.Points)
                                            .ToList();

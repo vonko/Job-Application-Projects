@@ -25,8 +25,9 @@ namespace FootballLeagueAutofacSetup
 
             // OPTIONAL: Enable action method parameter injection (RARE).
             //builder.InjectActionInvoker();
-            
-            builder.RegisterType<DALContext>().As<IDALContext>().InstancePerLifetimeScope();
+
+            builder.RegisterType<FootballTeamsRepository>().As<IFootballTeamsRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<PlayedGamesRepository>().As<IPlayedGamesRepository>().InstancePerLifetimeScope();
 
             builder.RegisterType<CacheProviderService>().As<ICacheProviderService>().InstancePerLifetimeScope();
             builder.RegisterType<FootballTeamsService>().As<IFootballTeamsService>().InstancePerLifetimeScope();

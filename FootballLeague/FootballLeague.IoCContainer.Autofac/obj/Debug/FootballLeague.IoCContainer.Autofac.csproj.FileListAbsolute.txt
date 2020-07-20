@@ -148,3 +148,4 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\o
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\obj\Debug\FootballLeague.IoCContainer.Autofac.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.IoCContainer.Autofac\bin\Debug\FootballLeague.DataAccess.dll.config

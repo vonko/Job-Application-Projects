@@ -9,11 +9,11 @@ namespace FootballLeague.DataAccess.Implementation
 {
     public class FootballTeamsService : IFootballTeamsService
     {
-        private readonly IDALContext dalCotext;
+        private readonly IFootballTeamsRepository teamsRepository;
 
-        public FootballTeamsService(IDALContext dalCotext)
+        public FootballTeamsService(IFootballTeamsRepository teamsRepository)
         {
-            this.dalCotext = dalCotext;
+            this.teamsRepository = teamsRepository;
         }
 
         public Result<FootballTeamDto> GetTeam(int teamId)
@@ -22,7 +22,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                FootballTeamDto teamDto = this.dalCotext.FootballTeamsRepository.Find(teamId);
+                FootballTeamDto teamDto = this.teamsRepository.Find(teamId);
                 if (teamDto == null)
                 {
                     result.SetError($"There is no team with #{ teamId }!");
@@ -45,7 +45,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                IList<FootballTeamDto> teamDtos = this.dalCotext.FootballTeamsRepository.AllMaterialed();
+                IList<FootballTeamDto> teamDtos = this.teamsRepository.AllMaterialed();
 
                 return result.SetData(teamDtos);
             }
@@ -69,7 +69,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                FootballTeamDto newTeamDto = this.dalCotext.FootballTeamsRepository.AddTeam(teamDto);
+                FootballTeamDto newTeamDto = this.teamsRepository.AddTeam(teamDto);
 
                 result.SetSuccess("Team added successfully.");
 
@@ -92,7 +92,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                FootballTeam footballTeam = this.dalCotext.FootballTeamsRepository.FindRough(teamDto.ID);
+                FootballTeam footballTeam = this.teamsRepository.FindRough(teamDto.ID);
                 if (footballTeam == null)
                 {
                     return result.SetError($"There is no team with #{ teamDto.ID }!");
@@ -102,7 +102,7 @@ namespace FootballLeague.DataAccess.Implementation
                 footballTeam.YearFound = teamDto.YearFound;
                 footballTeam.Stadium = teamDto.Stadium;
 
-                this.dalCotext.FootballTeamsRepository.Update(footballTeam);
+                this.teamsRepository.Update(footballTeam);
             }
             catch(Exception ex)
             {
@@ -118,7 +118,7 @@ namespace FootballLeague.DataAccess.Implementation
 
             try
             {
-                this.dalCotext.FootballTeamsRepository.Delete(teamId);
+                this.teamsRepository.Delete(teamId);
             }
             catch (Exception ex)
             {

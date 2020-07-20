@@ -171,3 +171,4 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess.Implementat
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess.Implementation\obj\Debug\FootballLeague.DataAccess.Implementation.csproj.CopyComplete
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess.Implementation\bin\Debug\FootballLeague.DataAccess.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess.Implementation\bin\Debug\FootballLeague.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess.Implementation\bin\Debug\FootballLeague.DataAccess.dll.config

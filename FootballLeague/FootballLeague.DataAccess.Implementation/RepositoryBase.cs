@@ -1,4 +1,5 @@
 ﻿using FootballLeague.DataAccess.DbModels;
+using FootballLeague.DataAccess.Implementation.Context;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -21,9 +22,9 @@ namespace FootballLeague.DataAccess.Implementation
             }
         }
 
-        public RepositoryBase(FootballLeagueDbContext context)
+        public RepositoryBase()
         {
-            this.context = context;
+            this.context = new FootballLeagueDbContext();
             this.shareContext = true;
         }
 

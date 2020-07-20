@@ -8,11 +8,6 @@ namespace FootballLeague.DataAccess.Implementation
 {
     public class PlayedGamesRepository : RepositoryBase<PlayedGame>, IPlayedGamesRepository
     {
-        public PlayedGamesRepository(FootballLeagueDbContext context)
-            : base(context)
-        {
-        }
-
         public PlayedGameDto AddGame(AddPlayedGameDto gameToAdd)
         {
             PlayedGame game = Mapper.Map<AddPlayedGameDto, PlayedGame>(gameToAdd);

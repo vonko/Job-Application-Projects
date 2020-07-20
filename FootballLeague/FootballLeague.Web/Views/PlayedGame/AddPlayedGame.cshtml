@@ -33,8 +33,8 @@
             @Html.DropDownListFor(m => m.Result, Model.DataSources.Results.Select(x => new SelectListItem { Value = x.Key.ToString(), Text = x.Value.Name }))
         </div>
     </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+    <div class="row pt-15">
+        <div class="col-md-2">
             <input type="submit" class="btn btn-default" value="Submit" />
         </div>
     </div>

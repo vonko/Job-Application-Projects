@@ -1,7 +1,7 @@
 ﻿using FootballLeague.DataAccess.DbModels;
 using System.Data.Entity;
 
-namespace FootballLeague.DataAccess.Implementation
+namespace FootballLeague.DataAccess.Implementation.Context
 {
     public class FootballLeagueDbContext : DbContext
     {

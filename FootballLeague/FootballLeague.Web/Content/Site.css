@@ -31,6 +31,10 @@ textarea {
     padding-bottom: 15px;
 }
 
+.pt-15 {
+    padding-top: 15px;
+}
+
 .header {
     border-top: 1px solid black;
     border-bottom: 1px solid black;

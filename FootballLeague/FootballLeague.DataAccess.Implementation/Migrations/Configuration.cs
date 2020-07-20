@@ -1,3 +1,4 @@
+using FootballLeague.DataAccess.Implementation.Context;
 using System.Data.Entity.Migrations;
 
 namespace FootballLeague.DataAccess.Implementation.Migrations

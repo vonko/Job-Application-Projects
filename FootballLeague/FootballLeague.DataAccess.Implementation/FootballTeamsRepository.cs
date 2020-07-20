@@ -8,11 +8,6 @@ namespace FootballLeague.DataAccess.Implementation
 {
     public class FootballTeamsRepository : RepositoryBase<FootballTeam>, IFootballTeamsRepository
     {
-        public FootballTeamsRepository(FootballLeagueDbContext context)
-            : base(context)
-        {
-        }
-
         public FootballTeamDto AddTeam(AddFootballTeamDto teamToAdd)
         {
             FootballTeam team = Mapper.Map<AddFootballTeamDto, FootballTeam>(teamToAdd);

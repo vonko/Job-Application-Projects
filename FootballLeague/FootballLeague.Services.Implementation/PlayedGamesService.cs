@@ -17,15 +17,18 @@ namespace FootballLeague.Services.Implementation
         private const int WINNING_POINTS = 3;
         private const int DRAW_POINTS = 1;
 
-        private readonly IDALContext dalCotext;
+        private readonly IPlayedGamesRepository gamesRepository;
+        private readonly IFootballTeamsRepository teamsRepository;
         private readonly IDataSourceService dataSourceService;
         private readonly IDateTimeProvider dateTimeProvider;
 
-        public PlayedGamesService(IDALContext dalCotext,
+        public PlayedGamesService(IPlayedGamesRepository gamesRepository,
+                                  IFootballTeamsRepository teamsRepository,
                                   IDataSourceService dataSourceService,
                                   IDateTimeProvider dateTimeProvider)
         {
-            this.dalCotext = dalCotext;
+            this.gamesRepository = gamesRepository;
+            this.teamsRepository = teamsRepository;
             this.dataSourceService = dataSourceService;
             this.dateTimeProvider = dateTimeProvider;
         }
@@ -36,7 +39,7 @@ namespace FootballLeague.Services.Implementation
 
             try
             {
-                PlayedGameDto gameDto = this.dalCotext.PlayedGamesRepository.Find(gameId);
+                PlayedGameDto gameDto = this.gamesRepository.Find(gameId);
                 if (gameDto == null)
                 {
                     result.SetError($"There is no game with #{ gameId }!");
@@ -72,7 +75,7 @@ namespace FootballLeague.Services.Implementation
 
             try
             {
-                List<PlayedGame> games = this.dalCotext.PlayedGamesRepository.All().ToList();
+                List<PlayedGame> games = this.gamesRepository.All().ToList();
                 IList<PlayedGameDto> gameDtos = Mapper.Map<List<PlayedGame>, List<PlayedGameDto>>(games);
 
                 var dataSourcesResult = this.dataSourceService.GetPlayedGameDataSources();
@@ -109,7 +112,7 @@ namespace FootballLeague.Services.Implementation
                 using (var scope = new TransactionScope(TransactionScopeOption.Required))
                 {
                     gameDto.DatePlayed = this.dateTimeProvider.GetCurrentDateTime();
-                    PlayedGameDto newGameDto = this.dalCotext.PlayedGamesRepository.AddGame(gameDto);
+                    PlayedGameDto newGameDto = this.gamesRepository.AddGame(gameDto);
 
                     UpdatePlayedGameDto addedGame = Mapper.Map<PlayedGameDto, UpdatePlayedGameDto>(newGameDto);
                     Result updatePointsResult = this.UpdateTeamsPoints(addedGame, gameDeletion: false);
@@ -139,7 +142,7 @@ namespace FootballLeague.Services.Implementation
 
             try
             { 
-                PlayedGame oldPlayedGame = this.dalCotext.PlayedGamesRepository.FindRough(newGameDto.ID);
+                PlayedGame oldPlayedGame = this.gamesRepository.FindRough(newGameDto.ID);
                 if (newGameDto == null)
                 {
                     return result.SetError($"There is no game with #{ newGameDto.ID }!");
@@ -157,7 +160,7 @@ namespace FootballLeague.Services.Implementation
                     }
 
                     oldPlayedGame.Result = newGameDto.Result;
-                    this.dalCotext.PlayedGamesRepository.Update(oldPlayedGame);
+                    this.gamesRepository.Update(oldPlayedGame);
 
                     updatePointsResult = this.UpdateTeamsPoints(newGameDto, gameDeletion: false);
                     if (updatePointsResult.IsError)
@@ -186,13 +189,13 @@ namespace FootballLeague.Services.Implementation
             {
                 using (var scope = new TransactionScope(TransactionScopeOption.Required))
                 {
-                    PlayedGameDto gameDto = this.dalCotext.PlayedGamesRepository.Find(gameId);
+                    PlayedGameDto gameDto = this.gamesRepository.Find(gameId);
                     if (gameDto == null)
                     {
                         return result.SetError($"There is no game with #{ gameId }!");
                     }
 
-                    this.dalCotext.PlayedGamesRepository.Delete(gameDto.ID);
+                    this.gamesRepository.Delete(gameDto.ID);
 
                     UpdatePlayedGameDto deletedGame = Mapper.Map<PlayedGameDto, UpdatePlayedGameDto>(gameDto);
                     Result updateTeamPointsResult = this.UpdateTeamsPoints(deletedGame, gameDeletion: true);
@@ -228,7 +231,7 @@ namespace FootballLeague.Services.Implementation
             if (game.Result == GameResult.Won ||
                 game.Result == GameResult.Draw)
             {
-                FootballTeam homeTeam = this.dalCotext.FootballTeamsRepository.FindRough(game.HomeTeamId);
+                FootballTeam homeTeam = this.teamsRepository.FindRough(game.HomeTeamId);
                 if (homeTeam == null)
                 {
                     return result.SetError($"There is no team with id #{ game.HomeTeamId }!");
@@ -236,7 +239,7 @@ namespace FootballLeague.Services.Implementation
 
                 homeTeam = this.UpdateHomeTeamPoints(game, gameDeletion, homeTeam);
 
-                this.dalCotext.FootballTeamsRepository.Update(homeTeam);
+                this.teamsRepository.Update(homeTeam);
             }
 
             return result.SetSuccess("Team points updated.");
@@ -249,7 +252,7 @@ namespace FootballLeague.Services.Implementation
             if (game.Result == GameResult.Lost ||
                game.Result == GameResult.Draw)
             {
-                FootballTeam awayTeam = this.dalCotext.FootballTeamsRepository.FindRough(game.AwayTeamId);
+                FootballTeam awayTeam = this.teamsRepository.FindRough(game.AwayTeamId);
                 if (awayTeam == null)
                 {
                     return result.SetError($"There is no team with id #{ game.AwayTeamId }!");
@@ -257,7 +260,7 @@ namespace FootballLeague.Services.Implementation
 
                 awayTeam = this.UpdateAwayTeamPoints(game, gameDeletion, awayTeam);
 
-                this.dalCotext.FootballTeamsRepository.Update(awayTeam);
+                this.teamsRepository.Update(awayTeam);
             }
 
             return result.SetSuccess("Team points updated.");

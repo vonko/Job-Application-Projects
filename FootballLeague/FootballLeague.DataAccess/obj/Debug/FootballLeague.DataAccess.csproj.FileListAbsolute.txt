@@ -31,3 +31,8 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\F
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\obj\Debug\FootballLeague.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\FootballLeague.DataAccess.dll.config
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\EntityFramework.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\EntityFramework.xml
+D:\Job-Application-Projects\FootballLeague\FootballLeague.DataAccess\bin\Debug\EntityFramework.SqlServer.xml

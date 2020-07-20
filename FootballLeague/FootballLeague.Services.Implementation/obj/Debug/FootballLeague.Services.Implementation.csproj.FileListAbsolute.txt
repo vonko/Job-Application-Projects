@@ -49,3 +49,4 @@ D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementatio
 D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\obj\Debug\FootballLeague.Services.Implementation.pdb
 D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.dll
 D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.pdb
+D:\Job-Application-Projects\FootballLeague\FootballLeague.Services.Implementation\bin\Debug\FootballLeague.DataAccess.dll.config
