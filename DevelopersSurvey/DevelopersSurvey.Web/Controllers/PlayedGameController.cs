@@ -8,7 +8,7 @@ using DevelopersSurvey.Web.Models.PlayedGames;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace FootballLeague.Web.Controllers
+namespace DevelopersSurvey.Web.Controllers
 {
     public class PlayedGameController : Controller
     {

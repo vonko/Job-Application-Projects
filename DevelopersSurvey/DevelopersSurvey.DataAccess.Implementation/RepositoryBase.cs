@@ -11,7 +11,7 @@ namespace DevelopersSurvey.DataAccess.Implementation
     public abstract class RepositoryBase<TObject> : IRepositoryBase<TObject>
         where TObject : DbModelBase
     {
-        protected FootballLeagueDbContext context;
+        protected DevelopersSurveyDbContext context;
         protected bool shareContext;
 
         protected DbSet<TObject> DbSet
@@ -24,7 +24,7 @@ namespace DevelopersSurvey.DataAccess.Implementation
 
         public RepositoryBase()
         {
-            this.context = new FootballLeagueDbContext();
+            this.context = new DevelopersSurveyDbContext();
             this.shareContext = true;
         }
 

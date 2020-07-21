@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace FootballLeague.Web.Controllers
+namespace DevelopersSurvey.Web.Controllers
 {
     public class HomeController : Controller
     {

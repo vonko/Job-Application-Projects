@@ -116,3 +116,5 @@ D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\Developers
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\DevelopersSurvey.DataAccess.dll.config
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\DevelopersSurvey.Services.Implementation.pdb
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\EntityFramework.xml
+D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\EntityFramework.SqlServer.dll
+D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Web\bin\EntityFramework.SqlServer.xml

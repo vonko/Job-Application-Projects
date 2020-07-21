@@ -1,8 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using DevelopersSurvey.Services.Automapper;
-using FootballLeague.Web.Automapper;
-using FootballLeagueAutofacSetup;
+using DevelopersSurvey.Web.Automapper;
+using DevelopersSurveyAutofacSetup;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;

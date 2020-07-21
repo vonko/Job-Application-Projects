@@ -6,10 +6,10 @@ using DevelopersSurvey.Models.Rankings;
 using DevelopersSurvey.Web.Models.DataSources;
 using DevelopersSurvey.Web.Models.FootballTeams;
 using DevelopersSurvey.Web.Models.PlayedGames;
-using FootballLeague.Web.Models.Rankings;
+using DevelopersSurvey.Web.Models.Rankings;
 using System.Collections.Generic;
 
-namespace FootballLeague.Web.Automapper
+namespace DevelopersSurvey.Web.Automapper
 {
     public class WebLayerMapperProfile : Profile
     {

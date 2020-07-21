@@ -6,7 +6,7 @@ using DevelopersSurvey.Web.Models.FootballTeams;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace FootballLeague.Web.Controllers
+namespace DevelopersSurvey.Web.Controllers
 {
     public class FootballTeamController : Controller
     {

@@ -2,11 +2,11 @@
 using DevelopersSurvey.Models;
 using DevelopersSurvey.Models.Rankings;
 using DevelopersSurvey.Services;
-using FootballLeague.Web.Models.Rankings;
+using DevelopersSurvey.Web.Models.Rankings;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace FootballLeague.Web.Controllers
+namespace DevelopersSurvey.Web.Controllers
 {
     public class RankingController : Controller
     {

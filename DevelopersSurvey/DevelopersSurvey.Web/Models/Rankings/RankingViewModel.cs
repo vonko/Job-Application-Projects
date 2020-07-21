@@ -1,4 +1,4 @@
-﻿namespace FootballLeague.Web.Models.Rankings
+﻿namespace DevelopersSurvey.Web.Models.Rankings
 {
     public class RankingViewModel
     {

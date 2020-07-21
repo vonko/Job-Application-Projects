@@ -3,14 +3,14 @@ using System.Data.Entity;
 
 namespace DevelopersSurvey.DataAccess.Implementation.Context
 {
-    public class FootballLeagueDbContext : DbContext
+    public class DevelopersSurveyDbContext : DbContext
     {
-        public FootballLeagueDbContext() 
-            : base("name=FootballLeagueDBConnectionString")
+        public DevelopersSurveyDbContext() 
+            : base("name=DevelopersSurveyDBConnectionString")
         {
             //this.Configuration.LazyLoadingEnabled = true;
 
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<FootballLeagueDbContext, Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DevelopersSurveyDbContext, Migrations.Configuration>());
         }
 
         public DbSet<FootballTeam> FootballTeams { get; set; }

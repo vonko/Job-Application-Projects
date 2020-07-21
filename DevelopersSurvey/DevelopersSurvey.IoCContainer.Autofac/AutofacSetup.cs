@@ -8,7 +8,7 @@ using DevelopersSurvey.Services.Implementation.Utils;
 using DevelopersSurvey.Services.Utils;
 using System.Web.Mvc;
 
-namespace FootballLeagueAutofacSetup
+namespace DevelopersSurveyAutofacSetup
 {
     public static class AutofacSetup
     {
