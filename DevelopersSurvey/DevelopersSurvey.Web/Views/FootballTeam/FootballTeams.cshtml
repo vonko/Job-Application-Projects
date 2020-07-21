@@ -1,0 +1,66 @@
+﻿@model DevelopersSurvey.Web.Models.FootballTeams.FootballTeamsDataContextViewModel
+
+<h1>Football Teams</h1>
+@Html.ValidationSummary()
+
+<div class="row">
+    <div class="col-md-2 pl-25 pb-15 ">
+        @Html.ActionLink("Back To Home", "Index", "Home")
+    </div>
+    <div class="col-m3-2 pb-15 ">
+        @Html.ActionLink("Add Football Team", "AddFootballTeam", "FootballTeam")
+    </div>
+    <div class="col-md-2 pb-15">
+        @Html.ActionLink("Rankings", "Rankings", "Ranking")
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        NAME
+    </div>
+    <div class="col-md-2">
+        STADIUM
+    </div>
+    <div class="col-md-2">
+        YEAR FOUND
+    </div>
+    <div class="col-md-2">
+        POINTS
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+@foreach (var team in Model.Teams)
+{
+    <div class="row">
+        <div class="col-md-2">
+            @Html.ActionLink(@team.Name,
+                             "UpdateFootballTeam",
+                              new { teamId = team.ID })
+        </div>
+        <div class="col-md-2">
+            @team.Stadium
+        </div>
+        <div class="col-md-2">
+            @team.YearFound
+        </div>
+        <div class="col-md-3">
+            @team.Points
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Delete",
+                             "DeleteFootballTeam",
+                              new { teamId = team.ID })
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+
+    </script>
+}
+

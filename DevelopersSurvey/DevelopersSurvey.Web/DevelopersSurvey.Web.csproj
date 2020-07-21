@@ -46,10 +46,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.0.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -148,10 +158,26 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Automapper\WebLayerMapperProfile.cs" />
+    <Compile Include="Controllers\FootballTeamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlayedGameController.cs" />
+    <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataSources\DataSourceViewModel.cs" />
+    <Compile Include="Models\DataSources\PlayedGameDataSourcesViewModel.cs" />
+    <Compile Include="Models\FootballTeams\AddFootballTeamViewModel.cs" />
+    <Compile Include="Models\FootballTeams\FootballTeamsDataContextViewModel.cs" />
+    <Compile Include="Models\FootballTeams\FootballTeamViewModel.cs" />
+    <Compile Include="Models\FootballTeams\UpdateFootballTeamViewModel.cs" />
+    <Compile Include="Models\PlayedGames\AddPlayedGameViewModel.cs" />
+    <Compile Include="Models\PlayedGames\PlayedGamesDataContextViewModel.cs" />
+    <Compile Include="Models\PlayedGames\PlayedGameViewModel.cs" />
+    <Compile Include="Models\PlayedGames\UpdatePlayedGameViewModel.cs" />
+    <Compile Include="Models\Rankings\RankingsDataContextViewModel.cs" />
+    <Compile Include="Models\Rankings\RankingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,10 +219,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\FootballTeam\AddFootballTeam.cshtml" />
+    <Content Include="Views\FootballTeam\FootballTeams.cshtml" />
+    <Content Include="Views\FootballTeam\UpdateFootballTeam.cshtml" />
+    <Content Include="Views\PlayedGame\AddPlayedGame.cshtml" />
+    <Content Include="Views\PlayedGame\PlayedGames.cshtml" />
+    <Content Include="Views\PlayedGame\UpdatePlayedGame.cshtml" />
+    <Content Include="Views\Ranking\Rankings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -212,6 +244,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DevelopersSurvey.IoCContainer.Autofac\DevelopersSurvey.IoCContainer.Autofac.csproj">
+      <Project>{36e60b5f-2eaf-4b2b-a233-b49562da5d23}</Project>
+      <Name>DevelopersSurvey.IoCContainer.Autofac</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DevelopersSurvey.Models\DevelopersSurvey.Models.csproj">
       <Project>{f2f0993f-e616-4df5-925a-a7ad207d847d}</Project>
       <Name>DevelopersSurvey.Models</Name>

@@ -1,0 +1,65 @@
+﻿@model DevelopersSurvey.Web.Models.PlayedGames.PlayedGamesDataContextViewModel
+
+<h1>Played Games</h1>
+@Html.ValidationSummary()
+
+<div class="row">
+    <div class="col-md-2 pl-25 pb-15 ">
+        @Html.ActionLink("Back To Home", "Index", "Home")
+    </div>
+    <div class="col-md-2 pb-15">
+        @Html.ActionLink("Add Played Game", "AddPlayedGame", "PlayedGame")
+    </div>
+    <div class="col-md-2 pb-15">
+        @Html.ActionLink("Rankings", "Rankings", "Ranking")
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        
+    </div>
+    <div class="col-md-2">
+        HOME TEAM
+    </div>
+    <div class="col-md-2">
+        AWAY TEAM
+    </div>
+    <div class="col-md-2">
+        RESULT
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>
+
+@foreach (var game in Model.PlayedGames)
+{
+<div class="row">
+    <div class="col-md-2">
+        @Html.ActionLink("Update",
+                         "UpdatePlayedGame",
+                          new { gameId = game.ID })
+    </div>
+    <div class="col-md-2">
+        @game.HomeTeamName
+    </div>
+    <div class="col-md-2">
+        @game.AwayTeamName
+    </div>
+    <div class="col-md-2">
+        @game.ResultName
+    </div>
+    <div class="col-md-2">
+        @Html.ActionLink("Delete",
+                         "DeletePlayedGame",
+                          new { gameId = game.ID })
+    </div>
+</div>
+}
+
+@section scripts {
+    <script>
+
+    </script>
+}
