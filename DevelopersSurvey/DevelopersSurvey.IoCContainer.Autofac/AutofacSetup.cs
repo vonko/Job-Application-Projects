@@ -28,6 +28,7 @@ namespace DevelopersSurveyAutofacSetup
 
             builder.RegisterType<FootballTeamsRepository>().As<IFootballTeamsRepository>().InstancePerLifetimeScope();
             builder.RegisterType<PlayedGamesRepository>().As<IPlayedGamesRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<DevelopersRepository>().As<IDevelopersRepository>().InstancePerLifetimeScope();
 
             builder.RegisterType<CacheProviderService>().As<ICacheProviderService>().InstancePerLifetimeScope();
             builder.RegisterType<FootballTeamsService>().As<IFootballTeamsService>().InstancePerLifetimeScope();
@@ -35,6 +36,9 @@ namespace DevelopersSurveyAutofacSetup
             builder.RegisterType<RankingsService>().As<IRankingsService>().InstancePerLifetimeScope();
             builder.RegisterType<DataSourceService>().As<IDataSourceService>().InstancePerLifetimeScope();
             builder.RegisterType<DateTimeProvider>().As<IDateTimeProvider>().InstancePerLifetimeScope();
+
+            builder.RegisterType<DevelopersService>().As<IDevelopersService>().InstancePerLifetimeScope();
+            builder.RegisterType<SurveySummaryService>().As<ISurveySummaryService>().InstancePerLifetimeScope();
 
             //builder.RegisterType<IMapper>().As<Mapper>().InstancePerLifetimeScope();
 

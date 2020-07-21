@@ -3,3 +3,4 @@ D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Models\bin\Debug\D
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Models\obj\Debug\DevelopersSurvey.Models.csproj.CoreCompileInputs.cache
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Models\obj\Debug\DevelopersSurvey.Models.dll
 D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Models\obj\Debug\DevelopersSurvey.Models.pdb
+D:\Job-Application-Projects\DevelopersSurvey\DevelopersSurvey.Models\obj\Debug\DevelopersSurvey.Models.csprojAssemblyReference.cache

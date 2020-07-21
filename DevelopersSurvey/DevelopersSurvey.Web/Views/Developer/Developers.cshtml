@@ -1,0 +1,59 @@
+﻿@model DevelopersSurvey.Web.Models.Developer.DevelopersDataContextViewModel
+
+<h1>Football Teams</h1>
+@Html.ValidationSummary()
+
+<div class="row">
+    <div class="col-md-2 pl-25 pb-15 ">
+        @Html.ActionLink("Back To Home", "Index", "Home")
+    </div>
+    <div class="col-md-2 pb-15 ">
+        @Html.ActionLink("Add Developer", "AddDeveloper", "Developer")
+    </div>
+    <div class="col-md-2 pb-15">
+        @Html.ActionLink("Survery Results", "SurveryResults", "SurveryResult")
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        FIRST NAME
+    </div>
+    <div class="col-md-3">
+        LAST NAME
+    </div>
+    <div class="col-md-3">
+        PERSONAL ID NUMBER
+    </div>
+    <div class="col-md-3">
+        YEARS OF EXPERIENCE
+    </div>
+    <div class="col-md-3">
+
+    </div>
+</div>
+
+@foreach (var developer in Model.Developers)
+{
+    <div class="row">
+        <div class="col-md-3">
+            @developer.FirstName
+        </div>
+        <div class="col-md-3">
+            @developer.LastName
+        </div>
+        <div class="col-md-3">
+            @developer.PersonalIdNumber
+        </div>
+        <div class="col-md-3">
+            @developer.YearsOfExperience
+        </div>
+    </div>
+}
+
+@section scripts {
+    <script>
+
+    </script>
+}
+

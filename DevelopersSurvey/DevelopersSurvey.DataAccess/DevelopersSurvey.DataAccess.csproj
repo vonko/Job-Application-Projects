@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDevelopersRepository.cs" />
     <Compile Include="IPlayedGamesRepository.cs" />
     <Compile Include="IFootballTeamsRepository.cs" />
     <Compile Include="IRepositoryBase.cs" />

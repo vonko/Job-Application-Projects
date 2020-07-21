@@ -77,7 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\FootballLeagueDbContext.cs" />
+    <Compile Include="Context\DeveloperSurveyDbContext.cs" />
+    <Compile Include="DevelopersRepository.cs" />
     <Compile Include="PlayedGamesRepository.cs" />
     <Compile Include="FootballTeamsRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />

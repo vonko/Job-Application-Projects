@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbModelBase.cs" />
+    <Compile Include="Developer.cs" />
     <Compile Include="FootballTeam.cs" />
     <Compile Include="PlayedGame.cs" />
+    <Compile Include="LanguageLearnt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

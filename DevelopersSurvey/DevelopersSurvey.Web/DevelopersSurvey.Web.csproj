@@ -165,6 +165,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Automapper\WebLayerMapperProfile.cs" />
+    <Compile Include="Controllers\DeveloperController.cs" />
     <Compile Include="Controllers\FootballTeamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlayedGameController.cs" />
@@ -174,10 +175,14 @@
     </Compile>
     <Compile Include="Models\DataSources\DataSourceViewModel.cs" />
     <Compile Include="Models\DataSources\PlayedGameDataSourcesViewModel.cs" />
+    <Compile Include="Models\Developer\AddDeveloperViewModel.cs" />
+    <Compile Include="Models\Developer\DevelopersDataContextViewModel.cs" />
+    <Compile Include="Models\Developer\DeveloperViewModel.cs" />
     <Compile Include="Models\FootballTeams\AddFootballTeamViewModel.cs" />
     <Compile Include="Models\FootballTeams\FootballTeamsDataContextViewModel.cs" />
     <Compile Include="Models\FootballTeams\FootballTeamViewModel.cs" />
     <Compile Include="Models\FootballTeams\UpdateFootballTeamViewModel.cs" />
+    <Compile Include="Models\Language\AddLanguageLearntViewModel.cs" />
     <Compile Include="Models\PlayedGames\AddPlayedGameViewModel.cs" />
     <Compile Include="Models\PlayedGames\PlayedGamesDataContextViewModel.cs" />
     <Compile Include="Models\PlayedGames\PlayedGameViewModel.cs" />
@@ -232,6 +237,8 @@
     <Content Include="Views\PlayedGame\PlayedGames.cshtml" />
     <Content Include="Views\PlayedGame\UpdatePlayedGame.cshtml" />
     <Content Include="Views\Ranking\Rankings.cshtml" />
+    <Content Include="Views\Developer\AddDeveloper.cshtml" />
+    <Content Include="Views\Developer\Developers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

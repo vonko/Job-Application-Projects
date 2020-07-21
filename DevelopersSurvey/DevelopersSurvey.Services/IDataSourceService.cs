@@ -11,5 +11,9 @@ namespace DevelopersSurvey.Services
         IList<DataSourceDto> GetResultsDataSource();
 
         Result<PlayedGameDataSourcesDto> GetPlayedGameDataSources();
+
+        IList<DataSourceDto> GetLanguagesDataSource();
+
+        IList<DataSourceDto> GetSeniorityLevelsDataSource();
     }
 }

@@ -17,6 +17,10 @@ namespace DevelopersSurvey.DataAccess.Implementation.Context
 
         public DbSet<PlayedGame> PlayedGames { get; set; }
 
+        public DbSet<Developer> Developers { get; set; }
+
+        public DbSet<LanguageLearnt> KnownLanguages { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PlayedGame>()
@@ -29,6 +33,12 @@ namespace DevelopersSurvey.DataAccess.Implementation.Context
                         .HasRequired(m => m.AwayTeam)
                         .WithMany(t => t.AwayPlayedGames)
                         .HasForeignKey(m => m.AwayTeamId)
+                        .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<LanguageLearnt>()
+                        .HasRequired(m => m.Developer)
+                        .WithMany(t => t.KnownLanguages)
+                        .HasForeignKey(m => m.DeveloperID)
                         .WillCascadeOnDelete(false);
         }
     }

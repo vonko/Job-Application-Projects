@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
 using DevelopersSurvey.Models.DataSources;
+using DevelopersSurvey.Models.Developer;
 using DevelopersSurvey.Models.FootballTeam;
+using DevelopersSurvey.Models.Language;
 using DevelopersSurvey.Models.PlayedGame;
 using DevelopersSurvey.Models.Rankings;
 using DevelopersSurvey.Web.Models.DataSources;
+using DevelopersSurvey.Web.Models.Developer;
 using DevelopersSurvey.Web.Models.FootballTeams;
+using DevelopersSurvey.Web.Models.Language;
 using DevelopersSurvey.Web.Models.PlayedGames;
 using DevelopersSurvey.Web.Models.Rankings;
 using System.Collections.Generic;
@@ -38,6 +42,12 @@ namespace DevelopersSurvey.Web.Automapper
             CreateMap<List<DataSourceDto>, List<DataSourceViewModel>>();
 
             CreateMap<DataSourceDto, DataSourceViewModel>();
+
+            CreateMap<AddLanguageLearntDto, AddLanguageLearntViewModel>();
+
+            CreateMap<AddDeveloperDto, AddDeveloperViewModel>();
+
+            CreateMap<DeveloperDto, DeveloperViewModel>();
         }
     }
 }

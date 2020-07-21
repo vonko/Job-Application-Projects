@@ -1,0 +1,104 @@
+﻿@model DevelopersSurvey.Web.Models.Developer.AddDeveloperViewModel
+@{
+    ViewBag.Title = "Developer";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@using (Html.BeginForm("AddDeveloper", "Developer", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Add a Developer</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("First Name", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Last Name", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Personal ID Number", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PersonalIdNumber, new { @class = "form-control", @type = "number" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Years Of Experience", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.YearsOfExperience, new { @class = "form-control", @type = "number" })
+        </div>
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            First Language:
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FirstKnownLanguage.LanguageID, Model.Languages.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FirstKnownLanguage.SeniorityLevel, Model.SeniorityLevels.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+    </div>
+    <div class="row pt-15">
+        <div class="col-md-3">
+            Second Language:
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.SecondKnownLanguage.LanguageID, Model.Languages.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.SecondKnownLanguage.SeniorityLevel, Model.SeniorityLevels.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+    </div>
+    <div class="row pt-15">
+        <div class="col-md-3">
+            Third Language:
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.ThirdKnownLanguage.LanguageID, Model.Languages.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.ThirdKnownLanguage.SeniorityLevel, Model.SeniorityLevels.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+    </div>
+    <div class="row pt-15">
+        <div class="col-md-3">
+            Fourth Language:
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FourthKnownLanguage.LanguageID, Model.Languages.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FourthKnownLanguage.SeniorityLevel, Model.SeniorityLevels.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+    </div>
+    <div class="row pt-15">
+        <div class="col-md-3">
+            Fifth Language:
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FifthKnownLanguage.LanguageID, Model.Languages.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+        <div class="col-md-3">
+            @Html.DropDownListFor(m => m.FifthKnownLanguage.SeniorityLevel, Model.SeniorityLevels.Select(x => new SelectListItem { Value = x.ID.ToString(), Text = x.Name }))
+        </div>
+    </div>
+    <div class="row pt-15">
+        <div class="col-md-2">
+            <input type="submit" class="btn btn-default" value="Submit" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
