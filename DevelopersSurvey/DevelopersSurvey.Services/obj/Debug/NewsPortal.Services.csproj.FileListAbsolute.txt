@@ -1,0 +1,9 @@
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\bin\Debug\NewsPortal.Services.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\bin\Debug\NewsPortal.Services.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\obj\Debug\NewsPortal.Services.csproj.CoreCompileInputs.cache
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\obj\Debug\NewsPortal.Services.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\obj\Debug\NewsPortal.Services.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\obj\Debug\NewsPortal.Services.csprojAssemblyReference.cache
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\bin\Debug\NewsPortal.Models.dll
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\bin\Debug\NewsPortal.Models.pdb
+C:\Users\Vonko\Desktop\NewsPortal\NewsPortal.Services\obj\Debug\NewsPortal.Services.csproj.CopyComplete
