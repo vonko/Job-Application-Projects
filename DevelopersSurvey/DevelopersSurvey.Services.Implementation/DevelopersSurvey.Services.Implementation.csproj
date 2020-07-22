@@ -49,10 +49,7 @@
     <Compile Include="CacheProviderService.cs" />
     <Compile Include="DataSourceService.cs" />
     <Compile Include="DevelopersService.cs" />
-    <Compile Include="FootballTeamsService.cs" />
-    <Compile Include="PlayedGamesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RankingsService.cs" />
     <Compile Include="SurveySummaryService.cs" />
     <Compile Include="Utils\DateTimeProvider.cs" />
   </ItemGroup>

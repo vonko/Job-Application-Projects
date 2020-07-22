@@ -13,28 +13,12 @@ namespace DevelopersSurvey.DataAccess.Implementation.Context
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<DevelopersSurveyDbContext, Migrations.Configuration>());
         }
 
-        public DbSet<FootballTeam> FootballTeams { get; set; }
-
-        public DbSet<PlayedGame> PlayedGames { get; set; }
-
         public DbSet<Developer> Developers { get; set; }
 
         public DbSet<LanguageLearnt> KnownLanguages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PlayedGame>()
-              .HasRequired(m => m.HomeTeam)
-              .WithMany(t => t.HomePlayedGames)
-              .HasForeignKey(m => m.HomeTeamId)
-              .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PlayedGame>()
-                        .HasRequired(m => m.AwayTeam)
-                        .WithMany(t => t.AwayPlayedGames)
-                        .HasForeignKey(m => m.AwayTeamId)
-                        .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<LanguageLearnt>()
                         .HasRequired(m => m.Developer)
                         .WithMany(t => t.KnownLanguages)

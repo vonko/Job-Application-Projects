@@ -10,7 +10,7 @@ namespace DevelopersSurvey.DataAccess.DbModels
 
         public string LastName { get; set; }
 
-        public int PersonalIdNumber { get; set; }
+        public string PersonalIdNumber { get; set; }
 
         public int YearsOfExperience { get; set; }
 

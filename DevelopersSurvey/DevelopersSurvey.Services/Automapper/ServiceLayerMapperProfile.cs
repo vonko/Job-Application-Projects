@@ -1,10 +1,7 @@
 ﻿using AutoMapper;
 using DevelopersSurvey.DataAccess.DbModels;
-using DevelopersSurvey.Models;
-using DevelopersSurvey.Models.DataSources;
-using DevelopersSurvey.Models.FootballTeam;
-using DevelopersSurvey.Models.PlayedGame;
-using DevelopersSurvey.Models.Rankings;
+using DevelopersSurvey.Models.Developer;
+using DevelopersSurvey.Models.Language;
 using System.Collections.Generic;
 
 namespace DevelopersSurvey.Services.Automapper
@@ -13,23 +10,13 @@ namespace DevelopersSurvey.Services.Automapper
     {
         public ServiceLayerMapperProfile()
         {
-            CreateMap<AddFootballTeamDto, FootballTeam>();
+            CreateMap<List<AddDeveloperDto>, List<Developer>>();
 
-            CreateMap<FootballTeamDto, FootballTeam>();
+            CreateMap<List<DeveloperDto>, List<Developer>>();
 
-            CreateMap<UpdateFootballTeamDto, FootballTeam>();
+            CreateMap<List<AddLanguageLearntDto>, List<LanguageLearnt>>();
 
-            CreateMap<RankingDto, FootballTeam>();
-
-            CreateMap<AddPlayedGameDto, PlayedGame>();
-
-            CreateMap<UpdatePlayedGameDto, PlayedGame>();
-
-            CreateMap<PlayedGameDto, PlayedGame>();
-
-            CreateMap<FootballTeamDto, DataSourceDto>();
-
-            CreateMap<List<FootballTeamDto>, List<DataSourceDto>>();
+            CreateMap<List<LanguageLearntDto>, List<LanguageLearnt>>();
         }
     }
 }

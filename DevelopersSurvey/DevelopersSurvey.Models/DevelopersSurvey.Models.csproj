@@ -44,21 +44,16 @@
     <Compile Include="DataSources\PlayedGameDataSourcesDto.cs" />
     <Compile Include="Developer\AddDeveloperDto.cs" />
     <Compile Include="Developer\DeveloperDto.cs" />
-    <Compile Include="FootballTeam\AddFootballTeamDto.cs" />
+    <Compile Include="Language\AddLanguageLearntDto.cs" />
     <Compile Include="Language\LanguageLearntDto.cs" />
-    <Compile Include="PlayedGame\UpdatePlayedGameDto.cs" />
     <Compile Include="Language\ProgrammingLanguage.cs" />
     <Compile Include="Language\SeniorityLevel.cs" />
-    <Compile Include="Rankings\RankingDto.cs" />
-    <Compile Include="PlayedGame\AddPlayedGameDto.cs" />
     <Compile Include="DisplayStatus.cs" />
-    <Compile Include="FootballTeam\FootballTeamDto.cs" />
-    <Compile Include="PlayedGame\GameResult.cs" />
-    <Compile Include="PlayedGame\PlayedGameDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Result.cs" />
-    <Compile Include="FootballTeam\UpdateFootballTeamDto.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Survey\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

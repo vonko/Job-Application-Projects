@@ -1,11 +1,7 @@
-﻿using DevelopersSurvey.Models.ProgrammingLanguage;
-
-namespace DevelopersSurvey.Models.Language
+﻿namespace DevelopersSurvey.Models.Language
 {
-    public class AddLanguageLearntDto
+    public class LanguageLearntDto
     {
-        public ProgrammingLanguage.ProgrammingLanguage LanguageID { get; set; }
-
-        public SeniorityLevel SeniorityLevel { get; set; }
+        public int ID { get; set; }
     }
 }

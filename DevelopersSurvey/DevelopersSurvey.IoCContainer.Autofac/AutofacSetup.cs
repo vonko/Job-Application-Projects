@@ -25,15 +25,10 @@ namespace DevelopersSurveyAutofacSetup
 
             // OPTIONAL: Enable action method parameter injection (RARE).
             //builder.InjectActionInvoker();
-
-            builder.RegisterType<FootballTeamsRepository>().As<IFootballTeamsRepository>().InstancePerLifetimeScope();
-            builder.RegisterType<PlayedGamesRepository>().As<IPlayedGamesRepository>().InstancePerLifetimeScope();
+            
             builder.RegisterType<DevelopersRepository>().As<IDevelopersRepository>().InstancePerLifetimeScope();
 
             builder.RegisterType<CacheProviderService>().As<ICacheProviderService>().InstancePerLifetimeScope();
-            builder.RegisterType<FootballTeamsService>().As<IFootballTeamsService>().InstancePerLifetimeScope();
-            builder.RegisterType<PlayedGamesService>().As<IPlayedGamesService>().InstancePerLifetimeScope();
-            builder.RegisterType<RankingsService>().As<IRankingsService>().InstancePerLifetimeScope();
             builder.RegisterType<DataSourceService>().As<IDataSourceService>().InstancePerLifetimeScope();
             builder.RegisterType<DateTimeProvider>().As<IDateTimeProvider>().InstancePerLifetimeScope();
 

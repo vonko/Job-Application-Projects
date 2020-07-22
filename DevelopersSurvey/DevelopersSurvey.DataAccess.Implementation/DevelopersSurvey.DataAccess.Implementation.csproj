@@ -79,8 +79,6 @@
   <ItemGroup>
     <Compile Include="Context\DeveloperSurveyDbContext.cs" />
     <Compile Include="DevelopersRepository.cs" />
-    <Compile Include="PlayedGamesRepository.cs" />
-    <Compile Include="FootballTeamsRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryBase.cs" />

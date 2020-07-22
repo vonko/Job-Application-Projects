@@ -1,16 +1,10 @@
 ﻿using AutoMapper;
 using DevelopersSurvey.Models.DataSources;
 using DevelopersSurvey.Models.Developer;
-using DevelopersSurvey.Models.FootballTeam;
 using DevelopersSurvey.Models.Language;
-using DevelopersSurvey.Models.PlayedGame;
-using DevelopersSurvey.Models.Rankings;
 using DevelopersSurvey.Web.Models.DataSources;
 using DevelopersSurvey.Web.Models.Developer;
-using DevelopersSurvey.Web.Models.FootballTeams;
 using DevelopersSurvey.Web.Models.Language;
-using DevelopersSurvey.Web.Models.PlayedGames;
-using DevelopersSurvey.Web.Models.Rankings;
 using System.Collections.Generic;
 
 namespace DevelopersSurvey.Web.Automapper
@@ -19,26 +13,6 @@ namespace DevelopersSurvey.Web.Automapper
     {
         public WebLayerMapperProfile()
         {
-            CreateMap<AddFootballTeamDto, AddFootballTeamViewModel>();
-
-            CreateMap<UpdateFootballTeamDto, UpdateFootballTeamViewModel>();
-
-            CreateMap<FootballTeamDto, FootballTeamViewModel>();
-
-            CreateMap<List<FootballTeamDto>, List<FootballTeamViewModel>>();
-
-            CreateMap<AddPlayedGameDto, AddPlayedGameViewModel>();
-
-            CreateMap<UpdatePlayedGameDto, UpdatePlayedGameViewModel>();
-
-            CreateMap<PlayedGameDto, UpdatePlayedGameViewModel>();
-
-            CreateMap<PlayedGameDto, PlayedGameViewModel>();
-
-            CreateMap<List<PlayedGameDto>, List<PlayedGameViewModel>>();
-
-            CreateMap<RankingDto, RankingViewModel>();
-
             CreateMap<List<DataSourceDto>, List<DataSourceViewModel>>();
 
             CreateMap<DataSourceDto, DataSourceViewModel>();

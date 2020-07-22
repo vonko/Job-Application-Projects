@@ -3,7 +3,9 @@ using DevelopersSurvey.Models;
 using DevelopersSurvey.Models.DataSources;
 using DevelopersSurvey.Models.Developer;
 using DevelopersSurvey.Models.Language;
+using DevelopersSurvey.Models.ProgrammingLanguage;
 using DevelopersSurvey.Services;
+using DevelopersSurvey.Web.Attributes;
 using DevelopersSurvey.Web.Models.DataSources;
 using DevelopersSurvey.Web.Models.Developer;
 using DevelopersSurvey.Web.Models.Language;
@@ -48,11 +50,7 @@ namespace DevelopersSurvey.Web.Controllers
         {
             AddDeveloperViewModel viewModel = new AddDeveloperViewModel();
 
-            IList<DataSourceDto> languagesDataSource = this.dataSourceService.GetLanguagesDataSource();
-            viewModel.Languages = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(languagesDataSource);
-
-            IList<DataSourceDto> seniorityLevelsDataSource = this.dataSourceService.GetSeniorityLevelsDataSource();
-            viewModel.SeniorityLevels = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(seniorityLevelsDataSource);
+            viewModel = this.FillDataSources(viewModel);
 
             return View(viewModel);
         }
@@ -63,6 +61,8 @@ namespace DevelopersSurvey.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
+                viewModel = this.FillDataSources(viewModel);
+
                 return View(viewModel);
             }
             // Generate the token and send it
@@ -70,6 +70,7 @@ namespace DevelopersSurvey.Web.Controllers
             if (developerToAddResult.IsError)
             {
                 ModelState.AddModelError("", $"Error: { developerToAddResult.Message }");
+                viewModel = this.FillDataSources(viewModel);
 
                 return View(viewModel);
             }
@@ -79,7 +80,10 @@ namespace DevelopersSurvey.Web.Controllers
             Result<AddDeveloperDto> result = this.service.AddDeveloper(developerToAdd);
             if (result.IsError)
             {
+                viewModel = this.FillDataSources(viewModel);
                 ModelState.AddModelError("", $"Error: { result.Message }");
+
+                return View(viewModel);
             }
 
             return RedirectToAction("Developers", "Developer");
@@ -92,23 +96,33 @@ namespace DevelopersSurvey.Web.Controllers
             try
             {
                 AddDeveloperDto dto = Mapper.Map<AddDeveloperViewModel, AddDeveloperDto>(viewModel);
-                if (viewModel.FirstKnownLanguage != null && viewModel.FifthKnownLanguage.LanguageID != 0)
+                if (viewModel.FirstKnownLanguage != null && 
+                    viewModel.FirstKnownLanguage.LanguageID != ProgrammingLanguage.Select &&
+                    viewModel.FirstKnownLanguage.SeniorityLevel != SeniorityLevel.Select)
                 {
                     dto.KnownLanguages.Add(Mapper.Map<AddLanguageLearntViewModel, AddLanguageLearntDto>(viewModel.FirstKnownLanguage));
                 }
-                if (viewModel.SecondKnownLanguage != null && viewModel.SecondKnownLanguage.LanguageID != 0)
+                if (viewModel.SecondKnownLanguage != null && 
+                    viewModel.SecondKnownLanguage.LanguageID != ProgrammingLanguage.Select &&
+                    viewModel.SecondKnownLanguage.SeniorityLevel != SeniorityLevel.Select)
                 {
                     dto.KnownLanguages.Add(Mapper.Map<AddLanguageLearntViewModel, AddLanguageLearntDto>(viewModel.SecondKnownLanguage));
                 }
-                if (viewModel.ThirdKnownLanguage != null && viewModel.ThirdKnownLanguage.LanguageID != 0)
+                if (viewModel.ThirdKnownLanguage != null && 
+                    viewModel.ThirdKnownLanguage.LanguageID != ProgrammingLanguage.Select &&
+                    viewModel.ThirdKnownLanguage.SeniorityLevel != SeniorityLevel.Select)
                 {
                     dto.KnownLanguages.Add(Mapper.Map<AddLanguageLearntViewModel, AddLanguageLearntDto>(viewModel.ThirdKnownLanguage));
                 }
-                if (viewModel.FourthKnownLanguage != null && viewModel.FourthKnownLanguage.LanguageID != 0)
+                if (viewModel.FourthKnownLanguage != null && 
+                    viewModel.FourthKnownLanguage.LanguageID != ProgrammingLanguage.Select &&
+                    viewModel.FourthKnownLanguage.SeniorityLevel != SeniorityLevel.Select)
                 {
                     dto.KnownLanguages.Add(Mapper.Map<AddLanguageLearntViewModel, AddLanguageLearntDto>(viewModel.FourthKnownLanguage));
                 }
-                if (viewModel.FifthKnownLanguage != null && viewModel.FifthKnownLanguage.LanguageID != 0)
+                if (viewModel.FifthKnownLanguage != null && 
+                    viewModel.FifthKnownLanguage.LanguageID != ProgrammingLanguage.Select &&
+                    viewModel.FifthKnownLanguage.SeniorityLevel != SeniorityLevel.Select)
                 {
                     dto.KnownLanguages.Add(Mapper.Map<AddLanguageLearntViewModel, AddLanguageLearntDto>(viewModel.FifthKnownLanguage));
                 }
@@ -128,6 +142,17 @@ namespace DevelopersSurvey.Web.Controllers
 
                 return result;
             }
+        }
+
+        private AddDeveloperViewModel FillDataSources(AddDeveloperViewModel viewModel)
+        {
+            IList<DataSourceDto> languagesDataSource = this.dataSourceService.GetLanguagesDataSource();
+            viewModel.Languages = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(languagesDataSource);
+
+            IList<DataSourceDto> seniorityLevelsDataSource = this.dataSourceService.GetSeniorityLevelsDataSource();
+            viewModel.SeniorityLevels = Mapper.Map<IList<DataSourceDto>, IList<DataSourceViewModel>>(seniorityLevelsDataSource);
+
+            return viewModel;
         }
     }
 }

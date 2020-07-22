@@ -65,6 +65,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -164,12 +165,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\ValidateDeveloper.cs" />
     <Compile Include="Automapper\WebLayerMapperProfile.cs" />
     <Compile Include="Controllers\DeveloperController.cs" />
-    <Compile Include="Controllers\FootballTeamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlayedGameController.cs" />
-    <Compile Include="Controllers\RankingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,17 +177,7 @@
     <Compile Include="Models\Developer\AddDeveloperViewModel.cs" />
     <Compile Include="Models\Developer\DevelopersDataContextViewModel.cs" />
     <Compile Include="Models\Developer\DeveloperViewModel.cs" />
-    <Compile Include="Models\FootballTeams\AddFootballTeamViewModel.cs" />
-    <Compile Include="Models\FootballTeams\FootballTeamsDataContextViewModel.cs" />
-    <Compile Include="Models\FootballTeams\FootballTeamViewModel.cs" />
-    <Compile Include="Models\FootballTeams\UpdateFootballTeamViewModel.cs" />
     <Compile Include="Models\Language\AddLanguageLearntViewModel.cs" />
-    <Compile Include="Models\PlayedGames\AddPlayedGameViewModel.cs" />
-    <Compile Include="Models\PlayedGames\PlayedGamesDataContextViewModel.cs" />
-    <Compile Include="Models\PlayedGames\PlayedGameViewModel.cs" />
-    <Compile Include="Models\PlayedGames\UpdatePlayedGameViewModel.cs" />
-    <Compile Include="Models\Rankings\RankingsDataContextViewModel.cs" />
-    <Compile Include="Models\Rankings\RankingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,13 +219,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\FootballTeam\AddFootballTeam.cshtml" />
-    <Content Include="Views\FootballTeam\FootballTeams.cshtml" />
-    <Content Include="Views\FootballTeam\UpdateFootballTeam.cshtml" />
-    <Content Include="Views\PlayedGame\AddPlayedGame.cshtml" />
-    <Content Include="Views\PlayedGame\PlayedGames.cshtml" />
-    <Content Include="Views\PlayedGame\UpdatePlayedGame.cshtml" />
-    <Content Include="Views\Ranking\Rankings.cshtml" />
     <Content Include="Views\Developer\AddDeveloper.cshtml" />
     <Content Include="Views\Developer\Developers.cshtml" />
   </ItemGroup>
